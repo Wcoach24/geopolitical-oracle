@@ -149,7 +149,7 @@
   <!-- STATS -->
   <div class="stats fade-in" id="stats">
     <div class="stat">
-      <div class="stat-value cyan" id="total-recs">6</div>
+      <div class="stat-value cyan" id="total-recs">5</div>
       <div class="stat-label">Recomendaciones</div>
     </div>
     <div class="stat">
@@ -216,8 +216,8 @@
 
 <script>
 const DATA = {
-  "last_updated": "2026-03-23",
-  "tension": "ALERTA",
+  "last_updated": "2026-03-24",
+  "tension": "ALTO",
   "recomendaciones_activas": [
     {
       "id": "REC-GOLD-001",
@@ -229,10 +229,8 @@ const DATA = {
       "estado": "ACTIVA",
       "precio_referencia_entrada": 4490,
       "seguimiento": [
-        {
-          "fecha": "2026-03-23",
-          "nota": "Oro en $4,364 (-2.9%). Corrección por desescalación parcial. Tesis LP intacta."
-        }
+        { "fecha": "2026-03-23", "nota": "Oro en $4,364 (-2.9%). Corrección por desescalación parcial. Tesis LP intacta." },
+        { "fecha": "2026-03-24", "nota": "Oro ~$4,325 (-3.7% vs entrada). Volatilidad extrema intradía ($4,100-$4,536, ~10% swing). CBs 1,000+t/año intacto. PAXG premium expandido al 7%. Gold ETFs globales +$21B Q1. Corrección saludable — tesis intacta." }
       ]
     },
     {
@@ -245,14 +243,9 @@ const DATA = {
       "estado": "ACTIVA",
       "precio_referencia_entrada": null,
       "seguimiento": [
-        {
-          "fecha": "2026-03-22",
-          "nota": "Trigger Saudi activado: acuerdo 123 enviado al Congreso sin gold standard OIEA"
-        },
-        {
-          "fecha": "2026-03-23",
-          "nota": "Uranio spot $86. Tesis reforzada por cascada proliferación."
-        }
+        { "fecha": "2026-03-22", "nota": "Trigger Saudi activado: acuerdo 123 enviado al Congreso sin gold standard OIEA." },
+        { "fecha": "2026-03-23", "nota": "Uranio spot $86. Tesis reforzada por cascada proliferación." },
+        { "fecha": "2026-03-24", "nota": "TESIS REFORZADA: Constellation Energy adquiere Calpine por $16.4B (nuclear-AI nexus institucionalizado). Microsoft acelera restart Three Mile Island a 2027. Acuerdo 123 Saudi en Congreso. 5/5 capas activas. Recomendación con mayor convicción del Oracle." }
       ]
     },
     {
@@ -265,10 +258,8 @@ const DATA = {
       "estado": "ACTIVA",
       "precio_referencia_entrada": null,
       "seguimiento": [
-        {
-          "fecha": "2026-03-23",
-          "nota": "Tesis intacta. Rheinmetall, KNDS, BAE Systems como principales beneficiarios."
-        }
+        { "fecha": "2026-03-23", "nota": "Tesis intacta. Rheinmetall, KNDS, BAE Systems como principales beneficiarios." },
+        { "fecha": "2026-03-24", "nota": "DFNS -4.75% semanal pero inflows institucionales €92M/semana continúan. Institucionales compran el retroceso. YTD +17.15%. €800B de rearme es independiente del outcome de Irán y Ucrania." }
       ]
     },
     {
@@ -281,10 +272,8 @@ const DATA = {
       "estado": "ACTIVA",
       "precio_referencia_entrada": 70729,
       "seguimiento": [
-        {
-          "fecha": "2026-03-23",
-          "nota": "BTC $70,729 (+2.6%). Rally risk-on temporal. Sin cambio en tesis neutral."
-        }
+        { "fecha": "2026-03-23", "nota": "BTC $70,729 (+2.6%). Rally risk-on temporal. Sin cambio en tesis neutral." },
+        { "fecha": "2026-03-24", "nota": "BTC $70,515 (+2.5%). Consolida en rango $67,500-$71,775. Funding percentil 6 (overcrowded short extremo) + ETFs +$2B 4 semanas. Sin catalizador geopolítico propio. Punto de interés: $59,860. Neutral mantenida." }
       ]
     }
   ],
@@ -295,24 +284,16 @@ const DATA = {
       "tipo_activo": "commodity",
       "direccion": "alcista",
       "fecha_recomendacion": "2026-03-05",
-      "contexto_entrada": "Bloqueo del estrecho de Ormuz por Irán. 20% del petróleo mundial amenazado.",
-      "estado": "CERRADA",
       "fecha_cierre": "2026-03-23",
+      "contexto_entrada": "Bloqueo del estrecho de Ormuz por Irán. 20% del petróleo mundial amenazado.",
       "motivo_cierre": "Evento binario: ultimátum de Trump crea riesgo de corrección brusca. Recomendamos proteger ganancias.",
-      "resultado": "Alcista confirmado — petróleo subió significativamente desde recomendación",
+      "resultado": "Alcista confirmado — petróleo subió desde recomendación ($88→$112+). Cierre validado: Brent cayó -11% al día siguiente a $101.10. Timing correcto.",
+      "estado": "CERRADA",
       "seguimiento": [
-        {
-          "fecha": "2026-03-12",
-          "nota": "Petróleo en $95 — tesis intacta, Ormuz sigue bloqueado"
-        },
-        {
-          "fecha": "2026-03-19",
-          "nota": "Petróleo en $113 — recomendamos tomar ganancias parciales"
-        },
-        {
-          "fecha": "2026-03-23",
-          "nota": "Ultimátum Trump expira. Evento binario. Recomendamos cerrar."
-        }
+        { "fecha": "2026-03-12", "nota": "Petróleo en $95 — tesis intacta, Ormuz sigue bloqueado." },
+        { "fecha": "2026-03-19", "nota": "Petróleo en $113 — recomendamos tomar ganancias parciales." },
+        { "fecha": "2026-03-23", "nota": "Ultimátum Trump expira. Evento binario. Recomendamos cerrar posición." },
+        { "fecha": "2026-03-24", "nota": "VALIDADO: Brent cayó -11% a $101.10 el día siguiente al cierre. Timing correcto confirmado." }
       ],
       "resultado_tipo": "win"
     }
@@ -321,23 +302,26 @@ const DATA = {
     {
       "id": "WATCH-BTC-DCA",
       "asset": "Bitcoin",
-      "condicion": "Caída >15% desde niveles actuales O confirmación de tropas terrestres",
+      "condicion": "Caída >15% desde niveles actuales (~$59,860)",
       "accion_si_activa": "Recomendar DCA escalonado en BTC",
-      "estado": "ESPERANDO"
+      "estado": "ESPERANDO",
+      "ultima_nota": "2026-03-24: BTC $70,515. Trigger a $59,860 (15% de distancia). Monitorear post-28 Mar si hay risk-off."
     },
     {
       "id": "WATCH-PLATA",
       "asset": "Plata",
-      "condicion": "Corrección significativa a mínimos recientes",
-      "accion_si_activa": "Recomendar exposición a plata — infraposicionamiento extremo de institucionales",
-      "estado": "ESPERANDO"
+      "condicion": "Corrección a mínimos recientes ($58.58 SLV)",
+      "accion_si_activa": "Recomendar exposición a plata — infraposicionamiento extremo institucional (COT percentil 15)",
+      "estado": "ESPERANDO",
+      "ultima_nota": "2026-03-24: SLV $62.73. A 6.6% del trigger. Setup contrarian más limpio del board."
     },
     {
       "id": "WATCH-FED-CUT",
       "asset": "Oro / Metales preciosos",
       "condicion": "Fed anuncia recorte de tipos o forward guidance claramente dovish",
       "accion_si_activa": "Reforzar recomendación alcista en oro",
-      "estado": "ESPERANDO"
+      "estado": "ESPERANDO",
+      "ultima_nota": "2026-03-24: Fed hawkish hold. Solo 1 recorte proyectado 2026. PCE 2.7%. 10Y subió 3bps pese a oil -11%. Próxima señal: PCE marzo (finales de abril)."
     }
   ]
 };
@@ -367,63 +351,26 @@ function renderCard(rec, isClosed) {
 
   let timeline = '';
   if (rec.seguimiento && rec.seguimiento.length) {
-    timeline = `<div class="timeline">
-      <div class="timeline-title">Seguimiento</div>
-      ${rec.seguimiento.map(s => `
-        <div class="timeline-entry">
-          <div class="timeline-date">${formatDate(s.fecha)}</div>
-          <div class="timeline-dot"></div>
-          <div class="timeline-text">${s.nota}</div>
-        </div>
-      `).join('')}
-    </div>`;
+    timeline = '<div class="timeline"><div class="timeline-title">Seguimiento</div>' +
+      rec.seguimiento.map(s => '<div class="timeline-entry"><div class="timeline-date">' + formatDate(s.fecha) + '</div><div class="timeline-dot"></div><div class="timeline-text">' + s.nota + '</div></div>').join('') +
+      '</div>';
   }
 
   let result = '';
   if (isClosed && rec.resultado) {
     const cls = rec.resultado_tipo === 'win' ? 'result-win' : 'result-pending';
-    result = `<div class="result ${cls}">Resultado: ${rec.resultado}</div>`;
+    result = '<div class="result ' + cls + '">Resultado: ' + rec.resultado + '</div>';
   }
 
-  const closeMeta = isClosed && rec.fecha_cierre
-    ? `<span>Cerrada: ${formatDate(rec.fecha_cierre)}</span>` : '';
+  const closeMeta = isClosed && rec.fecha_cierre ? '<span>Cerrada: ' + formatDate(rec.fecha_cierre) + '</span>' : '';
 
-  return `<div class="rec-card">
-    <div class="rec-header">
-      <div class="rec-asset">${rec.asset}</div>
-      <div class="rec-badges">${statusBadge}${directionBadge(rec.direccion)}</div>
-    </div>
-    <div class="rec-context">${rec.contexto_entrada}</div>
-    <div class="rec-meta">
-      <span>Desde: ${formatDate(rec.fecha_recomendacion)}</span>
-      <span>${days}d activa</span>
-      ${rec.precio_referencia_entrada ? `<span>Ref: $${rec.precio_referencia_entrada.toLocaleString()}</span>` : ''}
-      ${closeMeta}
-    </div>
-    ${result}
-    ${timeline}
-  </div>`;
+  return '<div class="rec-card"><div class="rec-header"><div class="rec-asset">' + rec.asset + '</div><div class="rec-badges">' + statusBadge + directionBadge(rec.direccion) + '</div></div><div class="rec-context">' + rec.contexto_entrada + '</div><div class="rec-meta"><span>Desde: ' + formatDate(rec.fecha_recomendacion) + '</span><span>' + days + 'd activa</span>' + (rec.precio_referencia_entrada ? '<span>Ref: $' + rec.precio_referencia_entrada.toLocaleString() + '</span>' : '') + closeMeta + '</div>' + result + timeline + '</div>';
 }
 
-// Render
-document.getElementById('active-container').innerHTML =
-  DATA.recomendaciones_activas.map(r => renderCard(r, false)).join('');
+document.getElementById('active-container').innerHTML = DATA.recomendaciones_activas.map(r => renderCard(r, false)).join('');
+document.getElementById('closed-container').innerHTML = DATA.recomendaciones_cerradas.map(r => renderCard(r, true)).join('');
+document.getElementById('watchlist-container').innerHTML = DATA.watchlist.map(w => '<div class="watch-item"><div><div class="watch-asset">' + w.asset + '</div><div class="watch-condition">' + w.condicion + '</div></div><div class="watch-status">' + w.estado + '</div></div>').join('');
 
-document.getElementById('closed-container').innerHTML =
-  DATA.recomendaciones_cerradas.map(r => renderCard(r, true)).join('');
-
-document.getElementById('watchlist-container').innerHTML =
-  DATA.watchlist.map(w => `
-    <div class="watch-item">
-      <div>
-        <div class="watch-asset">${w.asset}</div>
-        <div class="watch-condition">${w.condicion}</div>
-      </div>
-      <div class="watch-status">${w.estado}</div>
-    </div>
-  `).join('');
-
-// Update stats
 const total = DATA.recomendaciones_activas.length + DATA.recomendaciones_cerradas.length;
 const active = DATA.recomendaciones_activas.length;
 const closed = DATA.recomendaciones_cerradas.length;
