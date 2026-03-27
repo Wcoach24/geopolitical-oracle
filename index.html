@@ -34,10 +34,7 @@
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { background:var(--bg); color:var(--text); font-family:var(--font); line-height:1.6; -webkit-font-smoothing:antialiased; }
-
   .container { max-width:900px; margin:0 auto; padding:0 20px; }
-
-  /* Header */
   .header { padding:48px 0 32px; border-bottom:1px solid var(--border); }
   .header-top { display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px; }
   .brand { font-family:var(--mono); font-size:11px; letter-spacing:3px; color:var(--text-muted); text-transform:uppercase; }
@@ -47,8 +44,6 @@
   .tension-normal { background:var(--green-bg); color:var(--green); border:1px solid rgba(34,197,94,0.2); }
   h1 { font-size:28px; font-weight:700; margin:16px 0 8px; letter-spacing:-0.5px; }
   .subtitle { color:var(--text-muted); font-size:15px; max-width:600px; }
-
-  /* Stats bar */
   .stats { display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:1px; background:var(--border); border-radius:12px; overflow:hidden; margin:32px 0; }
   .stat { background:var(--surface); padding:20px 24px; text-align:center; }
   .stat-value { font-family:var(--mono); font-size:28px; font-weight:700; }
@@ -56,13 +51,9 @@
   .stat-value.cyan { color:var(--cyan); }
   .stat-value.amber { color:var(--amber); }
   .stat-label { font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:1.5px; margin-top:4px; }
-
-  /* Sections */
   .section { margin:40px 0; }
   .section-title { font-family:var(--mono); font-size:11px; letter-spacing:2px; color:var(--cyan); text-transform:uppercase; margin-bottom:16px; display:flex; align-items:center; gap:8px; }
   .section-title::after { content:''; flex:1; height:1px; background:var(--border); }
-
-  /* Recommendation cards */
   .rec-card { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:24px; margin-bottom:12px; transition:border-color 0.2s ease; }
   .rec-card:hover { border-color:rgba(136,136,160,0.3); }
   .rec-header { display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:8px; margin-bottom:12px; }
@@ -73,58 +64,36 @@
   .badge-closed { background:var(--red-bg); color:var(--red); border:1px solid rgba(239,68,68,0.2); }
   .badge-neutral { background:var(--amber-bg); color:var(--amber); border:1px solid rgba(245,158,11,0.2); }
   .badge-direction { background:var(--cyan-bg); color:var(--cyan); border:1px solid rgba(34,211,238,0.15); }
-
   .rec-context { color:var(--text-muted); font-size:14px; margin-bottom:16px; }
   .rec-meta { display:flex; gap:24px; flex-wrap:wrap; font-size:12px; color:var(--text-dim); font-family:var(--mono); }
   .rec-meta span { display:flex; align-items:center; gap:4px; }
-
-  /* Timeline */
   .timeline { margin-top:16px; padding-top:16px; border-top:1px solid var(--border); }
   .timeline-title { font-size:11px; color:var(--text-dim); text-transform:uppercase; letter-spacing:1px; margin-bottom:10px; }
   .timeline-entry { display:flex; gap:12px; padding:6px 0; font-size:13px; }
   .timeline-date { color:var(--text-dim); font-family:var(--mono); font-size:12px; white-space:nowrap; min-width:60px; }
   .timeline-text { color:var(--text-muted); }
   .timeline-dot { width:6px; height:6px; border-radius:50%; background:var(--border); margin-top:7px; flex-shrink:0; }
-
-  /* Result tag */
   .result { margin-top:12px; padding:10px 16px; border-radius:8px; font-size:13px; font-weight:500; }
   .result-win { background:var(--green-bg); color:var(--green); border-left:3px solid var(--green); }
   .result-pending { background:var(--cyan-bg); color:var(--cyan); border-left:3px solid var(--cyan); }
-
-  /* Watchlist */
   .watch-item { display:flex; justify-content:space-between; align-items:center; padding:16px 20px; background:var(--surface); border:1px solid var(--border); border-radius:10px; margin-bottom:8px; }
   .watch-asset { font-weight:600; font-size:15px; }
   .watch-condition { color:var(--text-muted); font-size:13px; margin-top:2px; }
   .watch-status { font-family:var(--mono); font-size:11px; color:var(--text-dim); letter-spacing:1px; text-transform:uppercase; }
-
-  /* Frameworks */
   .framework-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
   .framework-card { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:20px; }
   .framework-name { font-weight:600; font-size:15px; margin-bottom:4px; }
   .framework-desc { color:var(--text-muted); font-size:13px; line-height:1.5; }
-
-  /* Footer */
   .footer { margin-top:64px; padding:32px 0; border-top:1px solid var(--border); text-align:center; }
   .footer p { color:var(--text-dim); font-size:12px; }
   .footer a { color:var(--cyan); text-decoration:none; }
   .footer a:hover { text-decoration:underline; }
-
-  /* CTA */
   .cta-section { text-align:center; margin:48px 0; padding:40px 24px; background:var(--surface); border:1px solid var(--border); border-radius:16px; }
   .cta-section h2 { font-size:22px; margin-bottom:8px; }
   .cta-section p { color:var(--text-muted); font-size:14px; margin-bottom:20px; }
   .cta-btn { display:inline-flex; align-items:center; gap:8px; padding:12px 28px; background:var(--cyan); color:var(--bg); font-weight:600; font-size:14px; border:none; border-radius:8px; cursor:pointer; text-decoration:none; transition:all 0.2s ease; }
   .cta-btn:hover { opacity:0.9; transform:translateY(-1px); }
-
-  /* Responsive */
-  @media (max-width:640px) {
-    h1 { font-size:22px; }
-    .framework-grid { grid-template-columns:1fr; }
-    .rec-meta { gap:12px; }
-    .stats { grid-template-columns:repeat(2, 1fr); }
-  }
-
-  /* Animations */
+  @media (max-width:640px) { h1 { font-size:22px; } .framework-grid { grid-template-columns:1fr; } .rec-meta { gap:12px; } .stats { grid-template-columns:repeat(2, 1fr); } }
   .fade-in { opacity:0; transform:translateY(12px); animation:fadeIn 0.5s ease forwards; }
   @keyframes fadeIn { to { opacity:1; transform:translateY(0); } }
   .fade-in:nth-child(2) { animation-delay:0.1s; }
@@ -135,248 +104,78 @@
 </head>
 <body>
 <div class="container">
-
-  <!-- HEADER -->
   <header class="header fade-in">
     <div class="header-top">
       <span class="brand">Geopolitical Oracle</span>
-      <span class="tension-badge tension-alto" id="tension-badge">● Tensión Alta</span>
+      <span class="tension-badge tension-alto" id="tension-badge">&#9679; Tensi&oacute;n Alta</span>
     </div>
     <h1>Track Record</h1>
-    <p class="subtitle">Análisis geopolítico con implicaciones financieras. Cada recomendación tiene seguimiento público — no lanzamos ideas al aire.</p>
+    <p class="subtitle">An&aacute;lisis geopol&iacute;tico con implicaciones financieras. Cada recomendaci&oacute;n tiene seguimiento p&uacute;blico &mdash; no lanzamos ideas al aire.</p>
   </header>
-
-  <!-- STATS -->
   <div class="stats fade-in" id="stats">
-    <div class="stat">
-      <div class="stat-value cyan" id="total-recs">5</div>
-      <div class="stat-label">Recomendaciones</div>
-    </div>
-    <div class="stat">
-      <div class="stat-value green" id="active-recs">4</div>
-      <div class="stat-label">Activas</div>
-    </div>
-    <div class="stat">
-      <div class="stat-value" id="closed-recs">1</div>
-      <div class="stat-label">Cerradas</div>
-    </div>
-    <div class="stat">
-      <div class="stat-value green" id="win-rate">100%</div>
-      <div class="stat-label">Acierto</div>
-    </div>
+    <div class="stat"><div class="stat-value cyan" id="total-recs">6</div><div class="stat-label">Recomendaciones</div></div>
+    <div class="stat"><div class="stat-value green" id="active-recs">5</div><div class="stat-label">Activas</div></div>
+    <div class="stat"><div class="stat-value" id="closed-recs">1</div><div class="stat-label">Cerradas</div></div>
+    <div class="stat"><div class="stat-value green" id="win-rate">100%</div><div class="stat-label">Acierto</div></div>
   </div>
-
-  <!-- ACTIVE RECOMMENDATIONS -->
+  <div class="section fade-in"><div class="section-title">Recomendaciones Activas</div><div id="active-container"></div></div>
+  <div class="section fade-in"><div class="section-title">Cerradas</div><div id="closed-container"></div></div>
+  <div class="section fade-in"><div class="section-title">En el Radar</div><div id="watchlist-container"></div></div>
   <div class="section fade-in">
-    <div class="section-title">Recomendaciones Activas</div>
-    <div id="active-container"></div>
-  </div>
-
-  <!-- CLOSED RECOMMENDATIONS -->
-  <div class="section fade-in">
-    <div class="section-title">Cerradas</div>
-    <div id="closed-container"></div>
-  </div>
-
-  <!-- WATCHLIST -->
-  <div class="section fade-in">
-    <div class="section-title">En el Radar</div>
-    <div id="watchlist-container"></div>
-  </div>
-
-  <!-- FRAMEWORKS -->
-  <div class="section fade-in">
-    <div class="section-title">Frameworks de Análisis</div>
+    <div class="section-title">Frameworks de An&aacute;lisis</div>
     <div class="framework-grid">
-      <div class="framework-card">
-        <div class="framework-name">Ray Dalio — Gran Ciclo Imperial</div>
-        <div class="framework-desc">Analiza cómo las potencias ganan y pierden poder económico. 8 indicadores miden en qué etapa del ciclo está cada potencia. EE.UU. muestra señales de fase tardía. Implicaciones directas para oro, bonos y el sistema financiero global.</div>
-      </div>
-      <div class="framework-card">
-        <div class="framework-name">Robert Pape — Trampa de la Escalada</div>
-        <div class="framework-desc">Estudia por qué los bombardeos aéreos casi nunca logran lo que prometen. 70+ años de datos muestran que las campañas aéreas contra países con motivación existencial fallan el 90% de las veces. Predice cómo escalan los conflictos en 3 fases.</div>
-      </div>
+      <div class="framework-card"><div class="framework-name">Ray Dalio &mdash; Gran Ciclo Imperial</div><div class="framework-desc">Analiza c&oacute;mo las potencias ganan y pierden poder econ&oacute;mico. 8 indicadores miden en qu&eacute; etapa del ciclo est&aacute; cada potencia. EE.UU. muestra se&ntilde;ales de fase tard&iacute;a.</div></div>
+      <div class="framework-card"><div class="framework-name">Robert Pape &mdash; Trampa de la Escalada</div><div class="framework-desc">Estudia por qu&eacute; los bombardeos a&eacute;reos casi nunca logran lo que prometen. 70+ a&ntilde;os de datos muestran que las campa&ntilde;as a&eacute;reas contra pa&iacute;ses con motivaci&oacute;n existencial fallan el 90% de las veces.</div></div>
     </div>
   </div>
-
-  <!-- CTA -->
   <div class="cta-section fade-in">
-    <h2>Recibe el análisis cada mañana</h2>
-    <p>Newsletter diaria gratuita. Geopolítica con implicaciones financieras. Sin spam.</p>
-    <a href="#subscribe" class="cta-btn" id="cta-subscribe">Suscribirse →</a>
+    <h2>Recibe el an&aacute;lisis cada ma&ntilde;ana</h2>
+    <p>Newsletter diaria gratuita. Geopol&iacute;tica con implicaciones financieras. Sin spam.</p>
+    <a href="#subscribe" class="cta-btn" id="cta-subscribe">Suscribirse &rarr;</a>
   </div>
-
-  <!-- FOOTER -->
   <footer class="footer">
-    <p>Geopolitical Oracle · Análisis automatizado con frameworks académicos · No es asesoramiento financiero</p>
-    <p style="margin-top:8px;">Última actualización: <span id="last-updated">—</span></p>
+    <p>Geopolitical Oracle &middot; An&aacute;lisis automatizado con frameworks acad&eacute;micos &middot; No es asesoramiento financiero</p>
+    <p style="margin-top:8px;">&Uacute;ltima actualizaci&oacute;n: <span id="last-updated">&mdash;</span></p>
   </footer>
-
 </div>
-
 <script>
-const DATA = {
-  "last_updated": "2026-03-24",
-  "tension": "ALTO",
-  "recomendaciones_activas": [
-    {
-      "id": "REC-GOLD-001",
-      "asset": "Oro",
-      "tipo_activo": "metal_precioso",
-      "direccion": "alcista",
-      "fecha_recomendacion": "2026-03-19",
-      "contexto_entrada": "Corrección de -16% desde ATH. Fundamentales más alcistas de la década: BRICS acumulando, bancos centrales 1000t/año, dedolarización acelerando.",
-      "estado": "ACTIVA",
-      "precio_referencia_entrada": 4490,
-      "seguimiento": [
-        { "fecha": "2026-03-23", "nota": "Oro en $4,364 (-2.9%). Corrección por desescalación parcial. Tesis LP intacta." },
-        { "fecha": "2026-03-24", "nota": "Oro ~$4,325 (-3.7% vs entrada). Volatilidad extrema intradía ($4,100-$4,536, ~10% swing). CBs 1,000+t/año intacto. PAXG premium expandido al 7%. Gold ETFs globales +$21B Q1. Corrección saludable — tesis intacta." }
-      ]
-    },
-    {
-      "id": "REC-URANIUM-001",
-      "asset": "Uranio",
-      "tipo_activo": "commodity",
-      "direccion": "alcista",
-      "fecha_recomendacion": "2026-03-19",
-      "contexto_entrada": "Máxima convergencia: Arabia Saudí programa nuclear + AI demand + supply deficit. Antifragil ante cualquier escenario del conflicto.",
-      "estado": "ACTIVA",
-      "precio_referencia_entrada": null,
-      "seguimiento": [
-        { "fecha": "2026-03-22", "nota": "Trigger Saudi activado: acuerdo 123 enviado al Congreso sin gold standard OIEA." },
-        { "fecha": "2026-03-23", "nota": "Uranio spot $86. Tesis reforzada por cascada proliferación." },
-        { "fecha": "2026-03-24", "nota": "TESIS REFORZADA: Constellation Energy adquiere Calpine por $16.4B (nuclear-AI nexus institucionalizado). Microsoft acelera restart Three Mile Island a 2027. Acuerdo 123 Saudi en Congreso. 5/5 capas activas. Recomendación con mayor convicción del Oracle." }
-      ]
-    },
-    {
-      "id": "REC-DEFENSE-EU-001",
-      "asset": "Defensa Europea",
-      "tipo_activo": "sector",
-      "direccion": "alcista",
-      "fecha_recomendacion": "2026-03-19",
-      "contexto_entrada": "€800.000M de rearme europeo comprometido. No es ruido — es cambio estructural en gasto de defensa del continente.",
-      "estado": "ACTIVA",
-      "precio_referencia_entrada": null,
-      "seguimiento": [
-        { "fecha": "2026-03-23", "nota": "Tesis intacta. Rheinmetall, KNDS, BAE Systems como principales beneficiarios." },
-        { "fecha": "2026-03-24", "nota": "DFNS -4.75% semanal pero inflows institucionales €92M/semana continúan. Institucionales compran el retroceso. YTD +17.15%. €800B de rearme es independiente del outcome de Irán y Ucrania." }
-      ]
-    },
-    {
-      "id": "REC-BTC-001",
-      "asset": "Bitcoin",
-      "tipo_activo": "crypto",
-      "direccion": "neutral",
-      "fecha_recomendacion": "2026-03-19",
-      "contexto_entrada": "Sin catalizadores propios. Movimiento depende del apetito de riesgo general. Solo 2 capas de convergencia.",
-      "estado": "ACTIVA",
-      "precio_referencia_entrada": 70729,
-      "seguimiento": [
-        { "fecha": "2026-03-23", "nota": "BTC $70,729 (+2.6%). Rally risk-on temporal. Sin cambio en tesis neutral." },
-        { "fecha": "2026-03-24", "nota": "BTC $70,515 (+2.5%). Consolida en rango $67,500-$71,775. Funding percentil 6 (overcrowded short extremo) + ETFs +$2B 4 semanas. Sin catalizador geopolítico propio. Punto de interés: $59,860. Neutral mantenida." }
-      ]
-    }
-  ],
-  "recomendaciones_cerradas": [
-    {
-      "id": "REC-OIL-001",
-      "asset": "Petróleo (Brent)",
-      "tipo_activo": "commodity",
-      "direccion": "alcista",
-      "fecha_recomendacion": "2026-03-05",
-      "fecha_cierre": "2026-03-23",
-      "contexto_entrada": "Bloqueo del estrecho de Ormuz por Irán. 20% del petróleo mundial amenazado.",
-      "motivo_cierre": "Evento binario: ultimátum de Trump crea riesgo de corrección brusca. Recomendamos proteger ganancias.",
-      "resultado": "Alcista confirmado — petróleo subió desde recomendación ($88→$112+). Cierre validado: Brent cayó -11% al día siguiente a $101.10. Timing correcto.",
-      "estado": "CERRADA",
-      "seguimiento": [
-        { "fecha": "2026-03-12", "nota": "Petróleo en $95 — tesis intacta, Ormuz sigue bloqueado." },
-        { "fecha": "2026-03-19", "nota": "Petróleo en $113 — recomendamos tomar ganancias parciales." },
-        { "fecha": "2026-03-23", "nota": "Ultimátum Trump expira. Evento binario. Recomendamos cerrar posición." },
-        { "fecha": "2026-03-24", "nota": "VALIDADO: Brent cayó -11% a $101.10 el día siguiente al cierre. Timing correcto confirmado." }
-      ],
-      "resultado_tipo": "win"
-    }
-  ],
-  "watchlist": [
-    {
-      "id": "WATCH-BTC-DCA",
-      "asset": "Bitcoin",
-      "condicion": "Caída >15% desde niveles actuales (~$59,860)",
-      "accion_si_activa": "Recomendar DCA escalonado en BTC",
-      "estado": "ESPERANDO",
-      "ultima_nota": "2026-03-24: BTC $70,515. Trigger a $59,860 (15% de distancia). Monitorear post-28 Mar si hay risk-off."
-    },
-    {
-      "id": "WATCH-PLATA",
-      "asset": "Plata",
-      "condicion": "Corrección a mínimos recientes ($58.58 SLV)",
-      "accion_si_activa": "Recomendar exposición a plata — infraposicionamiento extremo institucional (COT percentil 15)",
-      "estado": "ESPERANDO",
-      "ultima_nota": "2026-03-24: SLV $62.73. A 6.6% del trigger. Setup contrarian más limpio del board."
-    },
-    {
-      "id": "WATCH-FED-CUT",
-      "asset": "Oro / Metales preciosos",
-      "condicion": "Fed anuncia recorte de tipos o forward guidance claramente dovish",
-      "accion_si_activa": "Reforzar recomendación alcista en oro",
-      "estado": "ESPERANDO",
-      "ultima_nota": "2026-03-24: Fed hawkish hold. Solo 1 recorte proyectado 2026. PCE 2.7%. 10Y subió 3bps pese a oil -11%. Próxima señal: PCE marzo (finales de abril)."
-    }
-  ]
-};
+const DATA = {"last_updated":"2026-03-27","tension":"ALTO","recomendaciones_activas":[{"id":"REC-GOLD-001","asset":"Oro","tipo_activo":"metal_precioso","direccion":"alcista","fecha_recomendacion":"2026-03-19","contexto_entrada":"Correcci\u00f3n de -16% desde ATH. Fundamentales m\u00e1s alcistas de la d\u00e9cada: BRICS acumulando, bancos centrales 1000t/a\u00f1o, dedolarizaci\u00f3n acelerando.","estado":"ACTIVA","precio_referencia_entrada":4490,"seguimiento":[{"fecha":"2026-03-23","nota":"Oro en $4,364 (-2.9%). Correcci\u00f3n por desescalaci\u00f3n parcial. Tesis LP intacta."},{"fecha":"2026-03-24","nota":"Oro ~$4,325 (-3.7% vs entrada). Volatilidad extrema intrad\u00eda. CBs 1,000+t/a\u00f1o intacto. PAXG premium 7%. Tesis intacta."},{"fecha":"2026-03-25","nota":"CORRECCI\u00d3N ABSORBIDA. Oro $4,565 (+1.7% vs entrada). BRICS 'The Unit' (40% oro) valid\u00e1ndose. Tesis m\u00e1s s\u00f3lida desde inicio."},{"fecha":"2026-03-26","nota":"PARADOJA T\u00c9CNICA. Oro -0.97% a $4,521 pese a Iran rechazando ceasefire. Riesgo geopol\u00edtico ya priceado. Pr\u00f3ximo catalizador: Fed cut o Pape Fase 3. Invalidaci\u00f3n: $4,400."},{"fecha":"2026-03-27","nota":"ALERTA INVALIDACI\u00d3N: Oro $4,463 (-1.27%). Se\u00f1al $4,400 a solo 1.4% de distancia. GLD outflows aceler\u00e1ndose. VIGILANCIA M\u00c1XIMA."}]},{"id":"REC-URANIUM-001","asset":"Uranio","tipo_activo":"commodity","direccion":"alcista","fecha_recomendacion":"2026-03-19","contexto_entrada":"M\u00e1xima convergencia: Arabia Saud\u00ed programa nuclear + AI demand + supply deficit. Antifragil ante cualquier escenario.","estado":"ACTIVA","precio_referencia_entrada":null,"seguimiento":[{"fecha":"2026-03-22","nota":"Trigger Saudi activado: acuerdo 123 enviado al Congreso."},{"fecha":"2026-03-23","nota":"Uranio spot $86. Tesis reforzada por cascada proliferaci\u00f3n."},{"fecha":"2026-03-24","nota":"Constellation Energy adquiere Calpine $16.4B. Microsoft restart Three Mile Island 2027. 5/5 capas."},{"fecha":"2026-03-25","nota":"SEMANA HIST\u00d3RICA: SoftBank Portsmouth + Meta/Oklo 1.2GW + Meta/TerraPower 2.79GW. DOE $2.7B. 5/5 capas m\u00e1ximo hist\u00f3rico."},{"fecha":"2026-03-26","nota":"Uranio spot $83.90 (-2.5%). Meta 6.6GW nuclear total confirmado. Divergencia spot-bearish vs tesis-bullish = ventana acumulaci\u00f3n."},{"fecha":"2026-03-27","nota":"EXPANSI\u00d3N GEOGR\u00c1FICA: 6 pa\u00edses del Sudeste Asi\u00e1tico reconsideran nuclear para IA. Spot $86-92. URA ETF descuento m\u00e1ximo. 5/5 capas."}]},{"id":"REC-DEFENSE-EU-001","asset":"Defensa Europea","tipo_activo":"sector","direccion":"alcista","fecha_recomendacion":"2026-03-19","contexto_entrada":"\u20ac800.000M de rearme europeo comprometido. Cambio estructural en gasto de defensa del continente.","estado":"ACTIVA","precio_referencia_entrada":null,"seguimiento":[{"fecha":"2026-03-23","nota":"Tesis intacta. Rheinmetall, KNDS, BAE Systems beneficiarios."},{"fecha":"2026-03-24","nota":"DFNS -4.75% semanal pero inflows \u20ac92M/semana. YTD +17.15%."},{"fecha":"2026-03-25","nota":"Rheinmetall backlog r\u00e9cord \u20ac63.8B. UN resoluci\u00f3n 107-12 ceasefire Ucrania acelera rearme."},{"fecha":"2026-03-26","nota":"Kuwait strike refuerza tesis. Aliados recalibran protecci\u00f3n americana. 4/5 capas."},{"fecha":"2026-03-27","nota":"UPGRADE 5/5 CAPAS. NATO: europeos +20% gasto defensa. DFNS $69.98 (+1.67%) \u2014 \u00fanico sector en verde en risk-off. Alemania \u20ac117.2B. EU plan \u20ac860B. TRADE DE ERA."}]},{"id":"REC-BTC-001","asset":"Bitcoin","tipo_activo":"crypto","direccion":"neutral","fecha_recomendacion":"2026-03-19","contexto_entrada":"Sin catalizadores propios. Solo 2 capas de convergencia.","estado":"ACTIVA","precio_referencia_entrada":70729,"seguimiento":[{"fecha":"2026-03-23","nota":"BTC $70,729. Rally risk-on temporal. Neutral."},{"fecha":"2026-03-24","nota":"BTC $70,515. Funding percentil 6. ETFs +$2B 4 semanas. Neutral."},{"fecha":"2026-03-25","nota":"BTC $70,602. Short squeeze form\u00e1ndose. Sin catalizador geopol\u00edtico. Neutral."},{"fecha":"2026-03-26","nota":"BTC $71,500 (+1.1%). Iran rejection no impact\u00f3 crypto. Neutral."},{"fecha":"2026-03-27","nota":"BTC $69,438 (-2.88%). ETF flipped a outflow -$171M. Fear & Greed 18 (EXTREME_FEAR). Trigger DCA $59,860 a 13.8%. Neutral."}]},{"id":"REC-GDX-001","asset":"Mineras de oro (GDX/GDXJ)","tipo_activo":"sector","direccion":"alcista","fecha_recomendacion":"2026-03-25","contexto_entrada":"Mineras rezagadas vs spot oro. M\u00faltiplos comprimidos crean ventana t\u00e1ctica. 4 capas de convergencia.","estado":"ACTIVA","precio_referencia_entrada":85.97,"seguimiento":[{"fecha":"2026-03-25","nota":"Recomendaci\u00f3n nueva. Oro $4,565, mineras rezagadas. Invalidaci\u00f3n: oro bajo $4,400."},{"fecha":"2026-03-26","nota":"GDX $85.97 (referencia establecida). Oro cede -0.97%. COT percentil 65."},{"fecha":"2026-03-27","nota":"GDX $83.56 (-2.81%) vs oro -1.27%. Leverage negativo confirmado 2.2x. Se\u00f1al $4,400 cr\u00edtica."}]}],"recomendaciones_cerradas":[{"id":"REC-OIL-001","asset":"Petr\u00f3leo (Brent)","tipo_activo":"commodity","direccion":"alcista","fecha_recomendacion":"2026-03-05","fecha_cierre":"2026-03-23","contexto_entrada":"Bloqueo del estrecho de Ormuz por Ir\u00e1n. 20% del petr\u00f3leo mundial amenazado.","motivo_cierre":"Evento binario: ultim\u00e1tum de Trump crea riesgo de correcci\u00f3n brusca.","resultado":"Alcista confirmado \u2014 petr\u00f3leo subi\u00f3 $88\u2192$112+. Cierre validado: Brent cay\u00f3 -11% al d\u00eda siguiente.","estado":"CERRADA","seguimiento":[{"fecha":"2026-03-12","nota":"Petr\u00f3leo en $95. Ormuz sigue bloqueado."},{"fecha":"2026-03-19","nota":"Petr\u00f3leo $113. Recomendamos ganancias parciales."},{"fecha":"2026-03-23","nota":"Ultim\u00e1tum Trump expira. Recomendamos cerrar."},{"fecha":"2026-03-24","nota":"VALIDADO: Brent cay\u00f3 -11% a $101.10. Timing correcto."},{"fecha":"2026-03-27","nota":"Brent $108 (+5.7%). Oil COT percentil 88. No se reabre \u2014 crowding extremo. Cierre 23-Mar correcto."}],"resultado_tipo":"win"}],"watchlist":[{"id":"WATCH-BTC-DCA","asset":"Bitcoin","condicion":"Ca\u00edda >15% desde niveles actuales O tropas terrestres en Ir\u00e1n","accion_si_activa":"DCA escalonado en BTC","estado":"ESPERANDO"},{"id":"WATCH-PLATA","asset":"Plata","condicion":"SLV \u2264$58.58 o COT percentil <5","accion_si_activa":"Exposici\u00f3n plata \u2014 infraposicionamiento extremo","estado":"ESPERANDO"},{"id":"WATCH-FED-CUT","asset":"Oro / Metales preciosos","condicion":"Fed recorte tipos o forward guidance dovish","accion_si_activa":"Reforzar alcista oro","estado":"ESPERANDO"}]};
 
 function formatDate(dateStr) {
   const d = new Date(dateStr + 'T00:00:00');
   return d.toLocaleDateString('es-ES', { day:'numeric', month:'short' });
 }
-
 function daysSince(dateStr) {
   const d = new Date(dateStr + 'T00:00:00');
-  const now = new Date();
-  return Math.floor((now - d) / (1000*60*60*24));
+  return Math.floor((new Date() - d) / (1000*60*60*24));
 }
-
 function directionBadge(dir) {
-  if (dir === 'alcista') return '<span class="badge badge-direction">↑ Alcista</span>';
-  if (dir === 'bajista') return '<span class="badge badge-direction">↓ Bajista</span>';
-  return '<span class="badge badge-neutral">→ Neutral</span>';
+  if (dir === 'alcista') return '<span class="badge badge-direction">&uarr; Alcista</span>';
+  if (dir === 'bajista') return '<span class="badge badge-direction">&darr; Bajista</span>';
+  return '<span class="badge badge-neutral">&rarr; Neutral</span>';
 }
-
 function renderCard(rec, isClosed) {
   const days = daysSince(rec.fecha_recomendacion);
-  const statusBadge = isClosed
-    ? '<span class="badge badge-closed">Cerrada</span>'
-    : '<span class="badge badge-active">Activa</span>';
-
+  const statusBadge = isClosed ? '<span class="badge badge-closed">Cerrada</span>' : '<span class="badge badge-active">Activa</span>';
   let timeline = '';
   if (rec.seguimiento && rec.seguimiento.length) {
-    timeline = '<div class="timeline"><div class="timeline-title">Seguimiento</div>' +
-      rec.seguimiento.map(s => '<div class="timeline-entry"><div class="timeline-date">' + formatDate(s.fecha) + '</div><div class="timeline-dot"></div><div class="timeline-text">' + s.nota + '</div></div>').join('') +
-      '</div>';
+    timeline = '<div class="timeline"><div class="timeline-title">Seguimiento</div>' + rec.seguimiento.map(s => '<div class="timeline-entry"><div class="timeline-date">' + formatDate(s.fecha) + '</div><div class="timeline-dot"></div><div class="timeline-text">' + s.nota + '</div></div>').join('') + '</div>';
   }
-
   let result = '';
   if (isClosed && rec.resultado) {
-    const cls = rec.resultado_tipo === 'win' ? 'result-win' : 'result-pending';
-    result = '<div class="result ' + cls + '">Resultado: ' + rec.resultado + '</div>';
+    result = '<div class="result ' + (rec.resultado_tipo === 'win' ? 'result-win' : 'result-pending') + '">Resultado: ' + rec.resultado + '</div>';
   }
-
   const closeMeta = isClosed && rec.fecha_cierre ? '<span>Cerrada: ' + formatDate(rec.fecha_cierre) + '</span>' : '';
-
   return '<div class="rec-card"><div class="rec-header"><div class="rec-asset">' + rec.asset + '</div><div class="rec-badges">' + statusBadge + directionBadge(rec.direccion) + '</div></div><div class="rec-context">' + rec.contexto_entrada + '</div><div class="rec-meta"><span>Desde: ' + formatDate(rec.fecha_recomendacion) + '</span><span>' + days + 'd activa</span>' + (rec.precio_referencia_entrada ? '<span>Ref: $' + rec.precio_referencia_entrada.toLocaleString() + '</span>' : '') + closeMeta + '</div>' + result + timeline + '</div>';
 }
-
 document.getElementById('active-container').innerHTML = DATA.recomendaciones_activas.map(r => renderCard(r, false)).join('');
 document.getElementById('closed-container').innerHTML = DATA.recomendaciones_cerradas.map(r => renderCard(r, true)).join('');
 document.getElementById('watchlist-container').innerHTML = DATA.watchlist.map(w => '<div class="watch-item"><div><div class="watch-asset">' + w.asset + '</div><div class="watch-condition">' + w.condicion + '</div></div><div class="watch-status">' + w.estado + '</div></div>').join('');
-
 const total = DATA.recomendaciones_activas.length + DATA.recomendaciones_cerradas.length;
 const active = DATA.recomendaciones_activas.length;
 const closed = DATA.recomendaciones_cerradas.length;
 const wins = DATA.recomendaciones_cerradas.filter(r => r.resultado_tipo === 'win').length;
-const winRate = closed > 0 ? Math.round((wins / closed) * 100) + '%' : '—';
-
+const winRate = closed > 0 ? Math.round((wins / closed) * 100) + '%' : '\u2014';
 document.getElementById('total-recs').textContent = total;
 document.getElementById('active-recs').textContent = active;
 document.getElementById('closed-recs').textContent = closed;
