@@ -37,7 +37,6 @@
 
   .container { max-width:900px; margin:0 auto; padding:0 20px; }
 
-  /* Header */
   .header { padding:48px 0 32px; border-bottom:1px solid var(--border); }
   .header-top { display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px; }
   .brand { font-family:var(--mono); font-size:11px; letter-spacing:3px; color:var(--text-muted); text-transform:uppercase; }
@@ -48,7 +47,6 @@
   h1 { font-size:28px; font-weight:700; margin:16px 0 8px; letter-spacing:-0.5px; }
   .subtitle { color:var(--text-muted); font-size:15px; max-width:600px; }
 
-  /* Stats bar */
   .stats { display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:1px; background:var(--border); border-radius:12px; overflow:hidden; margin:32px 0; }
   .stat { background:var(--surface); padding:20px 24px; text-align:center; }
   .stat-value { font-family:var(--mono); font-size:28px; font-weight:700; }
@@ -57,12 +55,10 @@
   .stat-value.amber { color:var(--amber); }
   .stat-label { font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:1.5px; margin-top:4px; }
 
-  /* Sections */
   .section { margin:40px 0; }
   .section-title { font-family:var(--mono); font-size:11px; letter-spacing:2px; color:var(--cyan); text-transform:uppercase; margin-bottom:16px; display:flex; align-items:center; gap:8px; }
   .section-title::after { content:''; flex:1; height:1px; background:var(--border); }
 
-  /* Recommendation cards */
   .rec-card { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:24px; margin-bottom:12px; transition:border-color 0.2s ease; }
   .rec-card:hover { border-color:rgba(136,136,160,0.3); }
   .rec-header { display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:8px; margin-bottom:12px; }
@@ -78,7 +74,6 @@
   .rec-meta { display:flex; gap:24px; flex-wrap:wrap; font-size:12px; color:var(--text-dim); font-family:var(--mono); }
   .rec-meta span { display:flex; align-items:center; gap:4px; }
 
-  /* Timeline */
   .timeline { margin-top:16px; padding-top:16px; border-top:1px solid var(--border); }
   .timeline-title { font-size:11px; color:var(--text-dim); text-transform:uppercase; letter-spacing:1px; margin-bottom:10px; }
   .timeline-entry { display:flex; gap:12px; padding:6px 0; font-size:13px; }
@@ -86,37 +81,31 @@
   .timeline-text { color:var(--text-muted); }
   .timeline-dot { width:6px; height:6px; border-radius:50%; background:var(--border); margin-top:7px; flex-shrink:0; }
 
-  /* Result tag */
   .result { margin-top:12px; padding:10px 16px; border-radius:8px; font-size:13px; font-weight:500; }
   .result-win { background:var(--green-bg); color:var(--green); border-left:3px solid var(--green); }
   .result-pending { background:var(--cyan-bg); color:var(--cyan); border-left:3px solid var(--cyan); }
 
-  /* Watchlist */
   .watch-item { display:flex; justify-content:space-between; align-items:center; padding:16px 20px; background:var(--surface); border:1px solid var(--border); border-radius:10px; margin-bottom:8px; }
   .watch-asset { font-weight:600; font-size:15px; }
   .watch-condition { color:var(--text-muted); font-size:13px; margin-top:2px; }
   .watch-status { font-family:var(--mono); font-size:11px; color:var(--text-dim); letter-spacing:1px; text-transform:uppercase; }
 
-  /* Frameworks */
   .framework-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
   .framework-card { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:20px; }
   .framework-name { font-weight:600; font-size:15px; margin-bottom:4px; }
   .framework-desc { color:var(--text-muted); font-size:13px; line-height:1.5; }
 
-  /* Footer */
   .footer { margin-top:64px; padding:32px 0; border-top:1px solid var(--border); text-align:center; }
   .footer p { color:var(--text-dim); font-size:12px; }
   .footer a { color:var(--cyan); text-decoration:none; }
   .footer a:hover { text-decoration:underline; }
 
-  /* CTA */
   .cta-section { text-align:center; margin:48px 0; padding:40px 24px; background:var(--surface); border:1px solid var(--border); border-radius:16px; }
   .cta-section h2 { font-size:22px; margin-bottom:8px; }
   .cta-section p { color:var(--text-muted); font-size:14px; margin-bottom:20px; }
   .cta-btn { display:inline-flex; align-items:center; gap:8px; padding:12px 28px; background:var(--cyan); color:var(--bg); font-weight:600; font-size:14px; border:none; border-radius:8px; cursor:pointer; text-decoration:none; transition:all 0.2s ease; }
   .cta-btn:hover { opacity:0.9; transform:translateY(-1px); }
 
-  /* Responsive */
   @media (max-width:640px) {
     h1 { font-size:22px; }
     .framework-grid { grid-template-columns:1fr; }
@@ -124,7 +113,6 @@
     .stats { grid-template-columns:repeat(2, 1fr); }
   }
 
-  /* Animations */
   .fade-in { opacity:0; transform:translateY(12px); animation:fadeIn 0.5s ease forwards; }
   @keyframes fadeIn { to { opacity:1; transform:translateY(0); } }
   .fade-in:nth-child(2) { animation-delay:0.1s; }
@@ -136,7 +124,6 @@
 <body>
 <div class="container">
 
-  <!-- HEADER -->
   <header class="header fade-in">
     <div class="header-top">
       <span class="brand">Geopolitical Oracle</span>
@@ -146,7 +133,6 @@
     <p class="subtitle">Análisis geopolítico con implicaciones financieras. Cada recomendación tiene seguimiento público — no lanzamos ideas al aire.</p>
   </header>
 
-  <!-- STATS -->
   <div class="stats fade-in" id="stats">
     <div class="stat">
       <div class="stat-value cyan" id="total-recs">6</div>
@@ -166,25 +152,21 @@
     </div>
   </div>
 
-  <!-- ACTIVE RECOMMENDATIONS -->
   <div class="section fade-in">
     <div class="section-title">Recomendaciones Activas</div>
     <div id="active-container"></div>
   </div>
 
-  <!-- CLOSED RECOMMENDATIONS -->
   <div class="section fade-in">
     <div class="section-title">Cerradas</div>
     <div id="closed-container"></div>
   </div>
 
-  <!-- WATCHLIST -->
   <div class="section fade-in">
     <div class="section-title">En el Radar</div>
     <div id="watchlist-container"></div>
   </div>
 
-  <!-- FRAMEWORKS -->
   <div class="section fade-in">
     <div class="section-title">Frameworks de Análisis</div>
     <div class="framework-grid">
@@ -199,14 +181,12 @@
     </div>
   </div>
 
-  <!-- CTA -->
   <div class="cta-section fade-in">
     <h2>Recibe el análisis cada mañana</h2>
     <p>Newsletter diaria gratuita. Geopolítica con implicaciones financieras. Sin spam.</p>
     <a href="#subscribe" class="cta-btn" id="cta-subscribe">Suscribirse →</a>
   </div>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <p>Geopolitical Oracle · Análisis automatizado con frameworks académicos · No es asesoramiento financiero</p>
     <p style="margin-top:8px;">Última actualización: <span id="last-updated">—</span></p>
@@ -215,289 +195,7 @@
 </div>
 
 <script>
-// Data injected by generator script — this will be replaced automatically
-const DATA = {
-  "last_updated": "2026-03-29",
-  "tension": "ALTO",
-  "recomendaciones_activas": [
-    {
-      "id": "REC-GOLD-001",
-      "asset": "Oro",
-      "tipo_activo": "metal_precioso",
-      "direccion": "alcista",
-      "fecha_recomendacion": "2026-03-19",
-      "contexto_entrada": "Corrección de -16% desde ATH. Fundamentales más alcistas de la década: BRICS acumulando, bancos centrales 1000t/año, dedolarización acelerando.",
-      "estado": "ACTIVA",
-      "precio_referencia_entrada": 4490,
-      "seguimiento": [
-        {
-          "fecha": "2026-03-23",
-          "nota": "Oro en $4,364 (-2.9%). Corrección por desescalación parcial. Tesis LP intacta."
-        },
-        {
-          "fecha": "2026-03-24",
-          "nota": "Oro ~$4,325 (-3.7% vs entrada). Volatilidad extrema intradía ($4,100-$4,536, ~10% swing) por señales mixtas Irán. CBs 1,000+t/año intacto. PAXG premium 7%. Gold ETFs globales +$21B Q1. Tesis intacta — corrección saludable."
-        },
-        {
-          "fecha": "2026-03-25",
-          "nota": "CORRECCIÓN ABSORBIDA COMPLETAMENTE. Oro $4,565 (+1.7% vs entrada $4,490). BRICS 'The Unit' (40% oro) validándose. CBs >60t/mes tercer año consecutivo. GLD outflow $2.9B pero gold ETFs globales +$21B Q1 = rotación papel→físico. Tesis más sólida."
-        },
-        {
-          "fecha": "2026-03-26",
-          "nota": "PARADOJA TÉCNICA CONFIRMADA. Oro -0.97% a $4,521 pese a Iran rechazando formalmente ceasefire. Riesgo geopolítico ya priceado. +0.7% vs entrada $4,490. Señal invalidación $4,400. CBs enero 2026 solo 5t vs 27t promedio."
-        },
-        {
-          "fecha": "2026-03-27",
-          "nota": "ALERTA INVALIDACIÓN: Oro $4,463 (-1.27%). Segundo día caída. -0.6% vs entrada $4,490. Señal invalidación $4,400 a ~1.4%. GLD outflows acelerándose. Korea del Sur añade oro a reservas desde 2013. VIGILANCIA MÁXIMA."
-        },
-        {
-          "fecha": "2026-03-28",
-          "nota": "REBOTE CONSTRUCTIVO. Oro $4,493 (+0.66%). Vuelve a +0.08% vs entrada $4,490. Señal invalidación $4,400 a 2.1% (se aleja vs 1.4% ayer). GLD outflows -$6B 3 semanas PERO gold ETFs globales +$21B Q1 = segundo trimestre más fuerte jamás. Korea y Malaysia nuevos compradores. PAXG premium 3%. Necesita confirmar $4,400 lunes."
-        },
-        {
-          "fecha": "2026-03-29",
-          "nota": "Sin cambio (domingo, mercados cerrados). Oro $4,493. +0.07% vs entrada. Señal invalidación $4,400 a 2.1%. Tesis intacta. APERTURA LUNES 30-MAR CRÍTICA: si rompe $4,400 → invalidación formal; si mantiene → tesis reconfirmada."
-        }
-      ]
-    },
-    {
-      "id": "REC-URANIUM-001",
-      "asset": "Uranio",
-      "tipo_activo": "commodity",
-      "direccion": "alcista",
-      "fecha_recomendacion": "2026-03-19",
-      "contexto_entrada": "Máxima convergencia: Arabia Saudí programa nuclear + AI demand + supply deficit. Antifragil ante cualquier escenario del conflicto.",
-      "estado": "ACTIVA",
-      "precio_referencia_entrada": null,
-      "seguimiento": [
-        {
-          "fecha": "2026-03-22",
-          "nota": "Trigger Saudi activado: acuerdo 123 enviado al Congreso sin gold standard OIEA"
-        },
-        {
-          "fecha": "2026-03-23",
-          "nota": "Uranio spot $86. Tesis reforzada por cascada proliferación."
-        },
-        {
-          "fecha": "2026-03-24",
-          "nota": "TESIS REFORZADA: Constellation-Calpine $16.4B + Microsoft TMI 2027 + Saudi 123. 5/5 capas."
-        },
-        {
-          "fecha": "2026-03-25",
-          "nota": "SEMANA HISTÓRICA: SoftBank Portsmouth + Meta/Oklo 1.2GW + Meta/TerraPower 2.79GW = tres deals AI-nuclear en 48h. DOE $2.7B. 5/5 capas máximo histórico."
-        },
-        {
-          "fecha": "2026-03-26",
-          "nota": "Spot $83.90 (-2.5%) retroceso táctico. Meta 6.6GW total confirmado. EIA 9% electricidad EEUU 2030. Ventana acumulación. 5/5 capas."
-        },
-        {
-          "fecha": "2026-03-27",
-          "nota": "EXPANSIÓN GEOGRÁFICA: 6 países SE Asia (2,000+ data centers) reconsideran nuclear para IA. Demanda se globaliza. Spot $86.20. 5/5 capas máximo histórico."
-        },
-        {
-          "fecha": "2026-03-28",
-          "nota": "Tesis intacta y reforzada. SE Asia nuclear renaissance confirma globalización demanda. TRIGGER-SAUDI-NUCLEAR estructuralmente irreversible. Spot ~$86.20. 5/5 capas. Trade de era."
-        },
-        {
-          "fecha": "2026-03-29",
-          "nota": "Sin cambio (domingo). Spot ~$86.20. 5/5 capas sostenido. Cascada proliferación irreversible (Stimson Center). 6 países SE Asia + Saudi 123 + AI demand globalizada. Trade de era."
-        }
-      ]
-    },
-    {
-      "id": "REC-DEFENSE-EU-001",
-      "asset": "Defensa Europea",
-      "tipo_activo": "sector",
-      "direccion": "alcista",
-      "fecha_recomendacion": "2026-03-19",
-      "contexto_entrada": "€800.000M de rearme europeo comprometido. No es ruido — es cambio estructural en gasto de defensa del continente.",
-      "estado": "ACTIVA",
-      "precio_referencia_entrada": null,
-      "capas_convergencia_actual": 5,
-      "seguimiento": [
-        {
-          "fecha": "2026-03-23",
-          "nota": "Tesis intacta. Rheinmetall, KNDS, BAE Systems principales beneficiarios."
-        },
-        {
-          "fecha": "2026-03-24",
-          "nota": "DFNS -4.75% semanal pero inflows €92M/semana. Institucionales compran retroceso. YTD +17.15%."
-        },
-        {
-          "fecha": "2026-03-25",
-          "nota": "Rheinmetall backlog récord €63.8B + ventas 2026 +45% YoY. UN resolución + Francia/UK tropas = rearme acelera."
-        },
-        {
-          "fecha": "2026-03-26",
-          "nota": "REFORZADA POR KUWAIT STRIKE. Primer aliado GCC no-beligerante afectado. Paralelo Suez 1956. Rheinmetall €63.8B."
-        },
-        {
-          "fecha": "2026-03-27",
-          "nota": "UPGRADE A 5/5 CAPAS. NATO +20% gasto ($574B adicionales). DFNS $69.98 (+1.67%) único sector verde en risk-off. Alemania €117.2B. EU €860B. 5/5 capas = TRADE DE ERA."
-        },
-        {
-          "fecha": "2026-03-28",
-          "nota": "Máxima convergencia. EU €860B con exclusión contratistas EEUU. Alemania €117.2B (3.2% PIB). Polonia $55B record. Houthi entry + Ucrania congelada refuerzan urgencia. 5/5 capas. Trade de era. DFNS NAV stale 3 días."
-        },
-        {
-          "fecha": "2026-03-29",
-          "nota": "Sin cambio (domingo). DFNS NAV stale 4 días ($69.98 al 25-Mar). EU €860B plan consolidado. Tres frentes activos (Irán, Houthis, Ucrania) refuerzan urgencia. 5/5 capas. Trade de era."
-        }
-      ]
-    },
-    {
-      "id": "REC-BTC-001",
-      "asset": "Bitcoin",
-      "tipo_activo": "crypto",
-      "direccion": "neutral",
-      "fecha_recomendacion": "2026-03-19",
-      "contexto_entrada": "Sin catalizadores propios. Movimiento depende del apetito de riesgo general. Solo 2 capas de convergencia.",
-      "estado": "ACTIVA",
-      "precio_referencia_entrada": 70729,
-      "seguimiento": [
-        {
-          "fecha": "2026-03-23",
-          "nota": "BTC $70,729 (+2.6%). Rally risk-on temporal. Neutral."
-        },
-        {
-          "fecha": "2026-03-24",
-          "nota": "BTC $70,515. Funding percentil 6. WATCH-BTC-DCA a 15%. Neutral."
-        },
-        {
-          "fecha": "2026-03-25",
-          "nota": "BTC $70,602. Short squeeze setup. Sin catalizador geopolítico. Neutral."
-        },
-        {
-          "fecha": "2026-03-26",
-          "nota": "BTC $71,500 (+1.27%). Desconexión geopolítica confirmada. WATCH-BTC-DCA a 16.3%. Neutral."
-        },
-        {
-          "fecha": "2026-03-27",
-          "nota": "BTC $69,438 (-2.88%). ETF outflow -$171M. WATCH-BTC-DCA a 13.8%. F&G 18. Neutral."
-        },
-        {
-          "fecha": "2026-03-28",
-          "nota": "BTC $66,008 (-4.94%). F&G 12 EXTREME FEAR máximo ciclo. ETF outflows -$171M. Funding percentil 6 = short squeeze extremo. Exchange outflows mínimo 2018. WATCH-BTC-DCA trigger a 9.3% — velocidad triplicada (16.3%→13.8%→9.3%). Kharg seizure podría cumplir condición alternativa. Neutral — movimiento es contagio risk-off."
-        },
-        {
-          "fecha": "2026-03-29",
-          "nota": "BTC $66,616 (+0.92% 24h). Leve recuperación aleja trigger DCA a 10.1% (vs 9.3% ayer). F&G sostenido EXTREME FEAR. Setup contrarian extremo sin catalizador. Neutral."
-        }
-      ]
-    },
-    {
-      "id": "REC-GDX-001",
-      "asset": "Mineras de oro (GDX/GDXJ)",
-      "tipo_activo": "sector",
-      "direccion": "alcista",
-      "fecha_recomendacion": "2026-03-25",
-      "contexto_entrada": "Mineras rezagadas vs spot. Múltiplos comprimidos. 4 capas de convergencia.",
-      "estado": "ACTIVA",
-      "precio_referencia_entrada": 85.97,
-      "seguimiento": [
-        {
-          "fecha": "2026-03-25",
-          "nota": "Recomendación nueva. Señal invalidación: oro bajo $4,400."
-        },
-        {
-          "fecha": "2026-03-26",
-          "nota": "Precio referencia oficial: GDX $85.97. Gold COT percentil 65."
-        },
-        {
-          "fecha": "2026-03-27",
-          "nota": "LEVERAGE NEGATIVO: GDX $83.56 (-2.81%) vs oro -1.27% = 2.2x. -2.8% desde referencia. Invalidación oro $4,400 doblemente crítica."
-        },
-        {
-          "fecha": "2026-03-28",
-          "nota": "REBOTE LEVERAGE POSITIVO: GDX $85.00 (+3.17%) vs oro +0.66% = amplificación 4.8x. Mejora de -2.8% a -1.1% vs entrada $85.97. Constructivo si lunes confirma. Dependiente oro >$4,400."
-        },
-        {
-          "fecha": "2026-03-29",
-          "nota": "Sin cambio (domingo). GDX $85.00. -1.1% vs entrada $85.97. Leverage positivo viernes constructivo. Dependiente oro >$4,400 lunes."
-        }
-      ]
-    }
-  ],
-  "recomendaciones_cerradas": [
-    {
-      "id": "REC-OIL-001",
-      "asset": "Petróleo (Brent)",
-      "tipo_activo": "commodity",
-      "direccion": "alcista",
-      "fecha_recomendacion": "2026-03-05",
-      "fecha_cierre": "2026-03-23",
-      "contexto_entrada": "Bloqueo del estrecho de Ormuz por Irán. 20% del petróleo mundial amenazado.",
-      "motivo_cierre": "Evento binario: ultimátum de Trump crea riesgo de corrección brusca. Recomendamos proteger ganancias.",
-      "resultado": "Alcista confirmado — petróleo subió $88→$112+. Cierre validado por caída -11% al día siguiente.",
-      "estado": "CERRADA",
-      "seguimiento": [
-        {
-          "fecha": "2026-03-12",
-          "nota": "Petróleo en $95 — tesis intacta, Ormuz sigue bloqueado"
-        },
-        {
-          "fecha": "2026-03-19",
-          "nota": "Petróleo en $113 — recomendamos tomar ganancias parciales"
-        },
-        {
-          "fecha": "2026-03-23",
-          "nota": "Ultimátum Trump expira. Evento binario. Recomendamos cerrar."
-        },
-        {
-          "fecha": "2026-03-24",
-          "nota": "VALIDADO: Brent cayó -11% a $101.10."
-        },
-        {
-          "fecha": "2026-03-25",
-          "nota": "Brent $101.50. Sin nueva posición."
-        },
-        {
-          "fecha": "2026-03-27",
-          "nota": "Brent $108.01. Oil COT 88+. No se reabre por crowding."
-        },
-        {
-          "fecha": "2026-03-28",
-          "nota": "Brent $112.57 (+4.22%). Máximo julio 2022. COT 88+ crowding extremo. No se reabre — riesgo binario máximo. Cierre 23-Mar validado."
-        }
-      ],
-      "resultado_tipo": "win"
-    }
-  ],
-  "watchlist": [
-    {
-      "id": "WATCH-BTC-DCA",
-      "asset": "Bitcoin",
-      "condicion": "Caída >15% desde niveles actuales O confirmación de tropas terrestres / operación en territorio iraní",
-      "accion_si_activa": "Recomendar DCA escalonado en BTC",
-      "estado": "ESPERANDO",
-      "ultima_nota": "2026-03-29: BTC $66,616 (+0.92%). Trigger $59,860 a 10.1% (vs 9.3% ayer — leve recuperación lo aleja). Kharg seizure como condición alternativa en evaluación."
-    },
-    {
-      "id": "WATCH-PLATA",
-      "asset": "Plata",
-      "condicion": "Corrección significativa a mínimos recientes ($58.58 SLV)",
-      "accion_si_activa": "Recomendar exposición a plata — infraposicionamiento extremo de institucionales",
-      "estado": "ESPERANDO",
-      "ultima_nota": "2026-03-29: SLV $63.14 (cierre viernes). Trigger $58.58 a 7.2%. Rebote viernes sugiere soporte $60-$61. COT percentil 8 mantiene setup contrarian."
-    },
-    {
-      "id": "WATCH-FED-CUT",
-      "asset": "Oro / Metales preciosos",
-      "condicion": "Fed anuncia recorte de tipos o forward guidance claramente dovish",
-      "accion_si_activa": "Reforzar recomendación alcista en oro",
-      "estado": "ESPERANDO",
-      "ultima_nota": "2026-03-29: ALEJÁNDOSE. 52% probabilidad hike. 10Y 4.44%, 30Y ~5.0%. Brent $112 imposibilita desinflación. Trigger LP — dovish pivot sería catalizador masivo por factor sorpresa."
-    },
-    {
-      "id": "WATCH-VIX-30",
-      "asset": "Equities (señal contrarian)",
-      "condicion": "VIX supera 30 de forma sostenida (3+ sesiones)",
-      "accion_si_activa": "Evaluar señal contrarian de compra en equities — históricamente 90% acierto a 12 meses",
-      "estado": "ESPERANDO",
-      "ultima_nota": "2026-03-29: VIX 27.44, sexto día >25. A 2.56 puntos de 30. Alta probabilidad activación lunes si apertura negativa con escalada Irán. Requiere 3+ sesiones >30 para confirmar."
-    }
-  ]
-};
+const DATA = {"last_updated":"2026-03-30","tension":"ALTO","recomendaciones_activas":[{"id":"REC-GOLD-001","asset":"Oro","tipo_activo":"metal_precioso","direccion":"alcista","fecha_recomendacion":"2026-03-19","contexto_entrada":"Corrección de -16% desde ATH. Fundamentales más alcistas de la década: BRICS acumulando, bancos centrales 1000t/año, dedolarización acelerando.","estado":"ACTIVA","precio_referencia_entrada":4490,"seguimiento":[{"fecha":"2026-03-23","nota":"Oro en $4,364 (-2.9%). Corrección por desescalación parcial. Tesis LP intacta."},{"fecha":"2026-03-24","nota":"Oro ~$4,325 (-3.7% vs entrada). Volatilidad extrema intradía ($4,100-$4,536, ~10% swing). Tesis intacta — corrección saludable."},{"fecha":"2026-03-25","nota":"CORRECCIÓN ABSORBIDA. Oro $4,565 (+1.7% vs entrada). BRICS Unit validándose. Gold ETFs globales +$21B Q1."},{"fecha":"2026-03-26","nota":"Oro -0.97% a $4,521. Riesgo geopolítico ya priceado. Señal invalidación $4,400."},{"fecha":"2026-03-27","nota":"ALERTA: Oro $4,463 (-1.27%). Señal invalidación $4,400 a ~1.4%. VIGILANCIA MÁXIMA."},{"fecha":"2026-03-28","nota":"REBOTE CONSTRUCTIVO. Oro $4,493. Señal invalidación $4,400 a 2.1%. Korea y Malaysia nuevos compradores."},{"fecha":"2026-03-29","nota":"Sin cambio (domingo). Oro $4,493. APERTURA LUNES CRÍTICA."},{"fecha":"2026-03-30","nota":"ZONA CRÍTICA. Oro abre $4,473. Señal invalidación $4,400 a 1.6%. Korea y Malaysia nuevos compradores CB. COT percentil 65 = no crowded. Cierre hoy es TEST DEFINITIVO."}]},{"id":"REC-URANIUM-001","asset":"Uranio","tipo_activo":"commodity","direccion":"alcista","fecha_recomendacion":"2026-03-19","contexto_entrada":"Máxima convergencia: Arabia Saudí programa nuclear + AI demand + supply deficit. Antifragil ante cualquier escenario.","estado":"ACTIVA","precio_referencia_entrada":null,"seguimiento":[{"fecha":"2026-03-22","nota":"Trigger Saudi activado: acuerdo 123 sin gold standard OIEA."},{"fecha":"2026-03-23","nota":"Uranio spot $86. Cascada proliferación."},{"fecha":"2026-03-24","nota":"Constellation-Calpine $16.4B + Microsoft TMI 2027. 5/5 capas."},{"fecha":"2026-03-25","nota":"SoftBank Portsmouth + Meta/Oklo + Meta/TerraPower = tres deals AI-nuclear en 48h. 5/5 capas."},{"fecha":"2026-03-26","nota":"Spot $83.90 retroceso táctico. Meta 6.6GW confirmado. 5/5 capas."},{"fecha":"2026-03-27","nota":"6 países SE Asia reconsideran nuclear para IA. Demanda se globaliza. Spot $86.20."},{"fecha":"2026-03-28","nota":"SE Asia nuclear renaissance. TRIGGER-SAUDI-NUCLEAR irreversible. 5/5 capas. Trade de era."},{"fecha":"2026-03-29","nota":"Sin cambio. Cascada proliferación irreversible (Stimson Center). Trade de era."},{"fecha":"2026-03-30","nota":"Tesis reforzada. Acuerdo 123 sin gold standard OIEA. 6 países SE Asia + Saudi + AI demand. Spot ~$86.20. 5/5 capas. Trade de era."}]},{"id":"REC-DEFENSE-EU-001","asset":"Defensa Europea","tipo_activo":"sector","direccion":"alcista","fecha_recomendacion":"2026-03-19","contexto_entrada":"€800.000M de rearme europeo comprometido. Cambio estructural en gasto de defensa.","estado":"ACTIVA","precio_referencia_entrada":null,"seguimiento":[{"fecha":"2026-03-23","nota":"Tesis intacta. Rheinmetall, KNDS, BAE principales beneficiarios."},{"fecha":"2026-03-24","nota":"DFNS -4.75% semanal pero inflows €92M/semana. YTD +17.15%."},{"fecha":"2026-03-25","nota":"Rheinmetall backlog récord €63.8B. Rearme acelera."},{"fecha":"2026-03-26","nota":"REFORZADA POR KUWAIT STRIKE. Paralelo Suez 1956."},{"fecha":"2026-03-27","nota":"UPGRADE 5/5 CAPAS. NATO +20% gasto. EU €860B. TRADE DE ERA."},{"fecha":"2026-03-28","nota":"EU €860B con exclusión contratistas EEUU. Alemania €117.2B. Polonia $55B. 5/5 capas."},{"fecha":"2026-03-29","nota":"Sin cambio. DFNS NAV stale. EU €860B. Tres frentes. 5/5 capas."},{"fecha":"2026-03-30","nota":"REFORZADA por Houthis tercer frente. Tres conflictos simultáneos = máxima urgencia rearme. Bab al-Mandeb amenazado = disrupción comercial europea. 5/5 capas. Trade de era."}]},{"id":"REC-BTC-001","asset":"Bitcoin","tipo_activo":"crypto","direccion":"neutral","fecha_recomendacion":"2026-03-19","contexto_entrada":"Sin catalizadores propios. Movimiento depende del apetito de riesgo general.","estado":"ACTIVA","precio_referencia_entrada":70729,"seguimiento":[{"fecha":"2026-03-23","nota":"BTC $70,729. Rally risk-on temporal. Neutral."},{"fecha":"2026-03-24","nota":"BTC $70,515. Funding percentil 6. Neutral."},{"fecha":"2026-03-25","nota":"BTC $70,602. Short squeeze setup. Neutral."},{"fecha":"2026-03-26","nota":"BTC $71,500. Desconexión geopolítica. Neutral."},{"fecha":"2026-03-27","nota":"BTC $69,438 (-2.88%). ETF outflow -$171M. Neutral."},{"fecha":"2026-03-28","nota":"BTC $66,008 (-4.94%). F&G EXTREME FEAR. WATCH-BTC-DCA a 9.3%. Neutral — contagio risk-off."},{"fecha":"2026-03-29","nota":"BTC $66,616. Trigger DCA a 10.1%. F&G EXTREME FEAR. Neutral."},{"fecha":"2026-03-30","nota":"BTC $66,528. F&G EXTREME FEAR tercer día. Funding percentil 6. WATCH-BTC-DCA trigger a 10.0%. Si Kharg seizure → trigger alternativo. Neutral."}]},{"id":"REC-GDX-001","asset":"Mineras de oro (GDX/GDXJ)","tipo_activo":"sector","direccion":"alcista","fecha_recomendacion":"2026-03-25","contexto_entrada":"Mineras rezagadas vs spot. Múltiplos comprimidos. 4 capas de convergencia.","estado":"ACTIVA","precio_referencia_entrada":85.97,"seguimiento":[{"fecha":"2026-03-25","nota":"Recomendación nueva. Invalidación: oro bajo $4,400."},{"fecha":"2026-03-26","nota":"Precio referencia: GDX $85.97. Gold COT percentil 65."},{"fecha":"2026-03-27","nota":"GDX $83.56 (-2.81%). Leverage negativo 2.2x. -2.8% desde referencia."},{"fecha":"2026-03-28","nota":"REBOTE: GDX $85.00 (+3.17%). Leverage positivo 4.8x. Constructivo."},{"fecha":"2026-03-29","nota":"Sin cambio. GDX $85.00. Dependiente oro >$4,400."},{"fecha":"2026-03-30","nota":"GDX $85.79. En -0.2% vs entrada. Leverage positivo 4.8x viernes. Dependiente de oro >$4,400 hoy."}]}],"recomendaciones_cerradas":[{"id":"REC-OIL-001","asset":"Petróleo (Brent)","tipo_activo":"commodity","direccion":"alcista","fecha_recomendacion":"2026-03-05","fecha_cierre":"2026-03-23","contexto_entrada":"Bloqueo del estrecho de Ormuz por Irán. 20% del petróleo mundial amenazado.","motivo_cierre":"Evento binario: ultimátum de Trump crea riesgo de corrección brusca.","resultado":"Alcista confirmado — petróleo subió $88→$112+. Cierre validado por caída -11% al día siguiente.","estado":"CERRADA","seguimiento":[{"fecha":"2026-03-12","nota":"Petróleo en $95 — tesis intacta, Ormuz bloqueado."},{"fecha":"2026-03-19","nota":"Petróleo en $113 — recomendamos ganancias parciales."},{"fecha":"2026-03-23","nota":"Ultimátum Trump. Evento binario. Recomendamos cerrar."},{"fecha":"2026-03-24","nota":"VALIDADO: Brent cayó -11% a $101.10."},{"fecha":"2026-03-25","nota":"Brent $101.50. Sin nueva posición."},{"fecha":"2026-03-27","nota":"Brent $108.01. COT 88+. No se reabre."},{"fecha":"2026-03-28","nota":"Brent $112.57. COT 88+ crowding extremo. No se reabre."},{"fecha":"2026-03-30","nota":"Brent $116.12 (+3.15%). Houthis + Kharg. COT 88+. No se reabre. Cierre 23-Mar validado."}],"resultado_tipo":"win"}],"watchlist":[{"id":"WATCH-BTC-DCA","asset":"Bitcoin","condicion":"Caída >15% O confirmación de tropas terrestres / operación en territorio iraní","accion_si_activa":"Recomendar DCA escalonado en BTC","estado":"ESPERANDO","ultima_nota":"2026-03-30: BTC $66,528. Trigger $59,860 a 10.0%. F&G EXTREME FEAR. Kharg seizure como condición alternativa."},{"id":"WATCH-PLATA","asset":"Plata","condicion":"Corrección significativa a mínimos recientes ($58.58 SLV)","accion_si_activa":"Recomendar exposición a plata","estado":"ESPERANDO","ultima_nota":"2026-03-30: SLV $63.44 (+4.39%). Trigger $58.58 a 7.7%. COT percentil 8."},{"id":"WATCH-FED-CUT","asset":"Oro / Metales preciosos","condicion":"Fed anuncia recorte de tipos o forward guidance dovish","accion_si_activa":"Reforzar recomendación alcista en oro","estado":"ESPERANDO","ultima_nota":"2026-03-30: ALEJÁNDOSE. 52% probabilidad HIKE. Brent $116 imposibilita desinflación."},{"id":"WATCH-VIX-30","asset":"Equities (señal contrarian)","condicion":"VIX supera 30 de forma sostenida (3+ sesiones)","accion_si_activa":"Evaluar señal contrarian de compra en equities","estado":"ESPERANDO","ultima_nota":"2026-03-30: VIX CRUZÓ 30 (31.05). SESIÓN 1 de 3. Alta probabilidad de sostenerse con tres frentes."}]};
 
 function formatDate(dateStr) {
   const d = new Date(dateStr + 'T00:00:00');
@@ -562,7 +260,6 @@ function renderCard(rec, isClosed) {
   </div>`;
 }
 
-// Render
 document.getElementById('active-container').innerHTML =
   DATA.recomendaciones_activas.map(r => renderCard(r, false)).join('');
 
@@ -580,7 +277,6 @@ document.getElementById('watchlist-container').innerHTML =
     </div>
   `).join('');
 
-// Update stats
 const total = DATA.recomendaciones_activas.length + DATA.recomendaciones_cerradas.length;
 const active = DATA.recomendaciones_activas.length;
 const closed = DATA.recomendaciones_cerradas.length;
