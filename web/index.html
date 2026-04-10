@@ -15,34 +15,17 @@
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#060A14;
-  --surface:#0C1220;
-  --surface-2:#111827;
-  --surface-3:#1A2236;
-  --border:rgba(255,255,255,0.06);
-  --border-active:rgba(255,255,255,0.12);
-  --text:#E2E8F0;
-  --text-secondary:#8B95B0;
-  --text-tertiary:#5A6380;
-  --text-quaternary:#3D4663;
-  --accent:#00D4AA;
-  --accent-dim:rgba(0,212,170,0.08);
-  --accent-border:rgba(0,212,170,0.2);
-  --warning:#FFBE0B;
-  --warning-dim:rgba(255,190,11,0.08);
-  --warning-border:rgba(255,190,11,0.2);
-  --danger:#FF4757;
-  --danger-dim:rgba(255,71,87,0.08);
-  --danger-border:rgba(255,71,87,0.2);
-  --info:#5B8DEF;
-  --info-dim:rgba(91,141,239,0.08);
-  --info-border:rgba(91,141,239,0.2);
-  --font:'Space Grotesk',-apple-system,BlinkMacSystemFont,sans-serif;
-  --mono:'JetBrains Mono',monospace;
+  --bg:#060A14;--surface:#0C1220;--surface-2:#111827;--surface-3:#1A2236;
+  --border:rgba(255,255,255,0.06);--border-active:rgba(255,255,255,0.12);
+  --text:#E2E8F0;--text-secondary:#8B95B0;--text-tertiary:#5A6380;--text-quaternary:#3D4663;
+  --accent:#00D4AA;--accent-dim:rgba(0,212,170,0.08);--accent-border:rgba(0,212,170,0.2);
+  --warning:#FFBE0B;--warning-dim:rgba(255,190,11,0.08);--warning-border:rgba(255,190,11,0.2);
+  --danger:#FF4757;--danger-dim:rgba(255,71,87,0.08);--danger-border:rgba(255,71,87,0.2);
+  --info:#5B8DEF;--info-dim:rgba(91,141,239,0.08);--info-border:rgba(91,141,239,0.2);
+  --font:'Space Grotesk',-apple-system,BlinkMacSystemFont,sans-serif;--mono:'JetBrains Mono',monospace;
 }
 body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 .page{max-width:1080px;margin:0 auto;padding:0 24px 80px}
 .nav{padding:20px 0;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border)}
 .nav-brand{font-family:var(--mono);font-size:11px;letter-spacing:3px;color:var(--text-tertiary);text-transform:uppercase}
@@ -51,115 +34,72 @@ a:hover{text-decoration:underline}
 .tension{display:inline-flex;align-items:center;gap:6px;padding:4px 14px;border-radius:100px;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
 .tension-dot{width:6px;height:6px;border-radius:50%;animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-.tension--alto{background:var(--danger-dim);color:var(--danger);border:1px solid var(--danger-border)}
-.tension--alto .tension-dot{background:var(--danger)}
-.tension--elevado{background:var(--warning-dim);color:var(--warning);border:1px solid var(--warning-border)}
-.tension--elevado .tension-dot{background:var(--warning)}
-.tension--normal{background:var(--accent-dim);color:var(--accent);border:1px solid var(--accent-border)}
-.tension--normal .tension-dot{background:var(--accent)}
-.tension--crisis{background:var(--danger-dim);color:var(--danger);border:1px solid rgba(255,71,87,0.4)}
-.tension--crisis .tension-dot{background:var(--danger);animation:pulse 0.8s ease-in-out infinite}
-.hero{padding:56px 0 40px}
-.hero h1{font-size:clamp(28px,4vw,42px);font-weight:700;letter-spacing:-1.5px;line-height:1.1;color:#fff}
+.tension--alto{background:var(--danger-dim);color:var(--danger);border:1px solid var(--danger-border)}.tension--alto .tension-dot{background:var(--danger)}
+.tension--elevado{background:var(--warning-dim);color:var(--warning);border:1px solid var(--warning-border)}.tension--elevado .tension-dot{background:var(--warning)}
+.tension--normal{background:var(--accent-dim);color:var(--accent);border:1px solid var(--accent-border)}.tension--normal .tension-dot{background:var(--accent)}
+.tension--crisis{background:var(--danger-dim);color:var(--danger);border:1px solid rgba(255,71,87,0.4)}.tension--crisis .tension-dot{background:var(--danger);animation:pulse 0.8s ease-in-out infinite}
+.hero{padding:56px 0 40px}.hero h1{font-size:clamp(28px,4vw,42px);font-weight:700;letter-spacing:-1.5px;line-height:1.1;color:#fff}
 .hero-sub{color:var(--text-secondary);font-size:16px;margin-top:12px;max-width:640px;line-height:1.7}
 .metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);border-radius:12px;overflow:hidden;margin-bottom:48px}
 .metric{background:var(--surface);padding:24px;text-align:center}
 .metric-val{font-family:var(--mono);font-size:clamp(24px,3vw,32px);font-weight:700;letter-spacing:-0.5px}
-.metric-val--accent{color:var(--accent)}
-.metric-val--warning{color:var(--warning)}
-.metric-val--info{color:var(--info)}
-.metric-val--danger{color:var(--danger)}
+.metric-val--accent{color:var(--accent)}.metric-val--warning{color:var(--warning)}.metric-val--info{color:var(--info)}.metric-val--danger{color:var(--danger)}
 .metric-label{font-size:10px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:1.5px;margin-top:6px}
-.section{margin-bottom:48px}
-.section-head{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.section{margin-bottom:48px}.section-head{display:flex;align-items:center;gap:12px;margin-bottom:20px}
 .section-tag{font-family:var(--mono);font-size:10px;letter-spacing:2px;color:var(--accent);text-transform:uppercase;white-space:nowrap}
-.section-line{flex:1;height:1px;background:var(--border)}
-.section-count{font-family:var(--mono);font-size:11px;color:var(--text-tertiary)}
+.section-line{flex:1;height:1px;background:var(--border)}.section-count{font-family:var(--mono);font-size:11px;color:var(--text-tertiary)}
 .rec{background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden;transition:border-color .2s ease}
-.rec:hover{border-color:var(--border-active)}
-.rec-main{padding:24px}
+.rec:hover{border-color:var(--border-active)}.rec-main{padding:24px}
 .rec-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:8px}
-.rec-asset{font-size:18px;font-weight:600;letter-spacing:-0.3px}
-.rec-badges{display:flex;gap:6px;flex-wrap:wrap}
+.rec-asset{font-size:18px;font-weight:600;letter-spacing:-0.3px}.rec-badges{display:flex;gap:6px;flex-wrap:wrap}
 .badge{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:100px;font-size:10px;font-weight:600;letter-spacing:.5px;text-transform:uppercase}
 .badge--active{background:var(--accent-dim);color:var(--accent);border:1px solid var(--accent-border)}
 .badge--closed{background:var(--danger-dim);color:var(--danger);border:1px solid var(--danger-border)}
 .badge--dir{background:var(--info-dim);color:var(--info);border:1px solid var(--info-border)}
-.badge--win{background:var(--accent-dim);color:var(--accent);border:1px solid var(--accent-border)}
-.badge--loss{background:var(--danger-dim);color:var(--danger);border:1px solid var(--danger-border)}
 .rec-context{color:var(--text-secondary);font-size:14px;line-height:1.6;margin-bottom:14px}
 .rec-meta{display:flex;gap:20px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;color:var(--text-tertiary)}
 .rec-meta-item{display:flex;align-items:center;gap:4px}
 .rec-timeline{border-top:1px solid var(--border);background:var(--bg);max-height:0;overflow:hidden;transition:max-height .4s ease}
-.rec-timeline.open{max-height:3000px}
+.rec-timeline.open{max-height:5000px}
 .timeline-toggle{display:flex;align-items:center;gap:6px;padding:12px 24px;cursor:pointer;font-size:12px;color:var(--text-tertiary);border-top:1px solid var(--border);transition:color .2s;user-select:none;background:var(--surface)}
-.timeline-toggle:hover{color:var(--text-secondary)}
-.timeline-toggle svg{transition:transform .3s ease}
-.timeline-toggle.open svg{transform:rotate(180deg)}
+.timeline-toggle:hover{color:var(--text-secondary)}.timeline-toggle svg{transition:transform .3s ease}.timeline-toggle.open svg{transform:rotate(180deg)}
 .timeline-inner{padding:16px 24px 24px}
-.tl-entry{display:grid;grid-template-columns:72px 8px 1fr;gap:0 12px;padding:0;margin:0}
+.tl-entry{display:grid;grid-template-columns:72px 8px 1fr;gap:0 12px}
 .tl-date{font-family:var(--mono);font-size:11px;color:var(--text-tertiary);padding:8px 0;text-align:right}
 .tl-line{display:flex;flex-direction:column;align-items:center;padding-top:12px}
 .tl-dot{width:6px;height:6px;border-radius:50%;background:var(--text-quaternary);flex-shrink:0}
-.tl-connector{width:1px;flex:1;background:var(--border);margin-top:4px}
-.tl-entry:last-child .tl-connector{display:none}
-.tl-text{font-size:13px;color:var(--text-secondary);padding:6px 0 16px;line-height:1.6}
-.tl-text strong{color:var(--text);font-weight:500}
+.tl-connector{width:1px;flex:1;background:var(--border);margin-top:4px}.tl-entry:last-child .tl-connector{display:none}
+.tl-text{font-size:13px;color:var(--text-secondary);padding:6px 0 16px;line-height:1.6}.tl-text strong{color:var(--text);font-weight:500}
 .rec-result{margin:12px 0 0;padding:10px 16px;border-radius:8px;font-size:13px;font-weight:500;display:flex;align-items:center;gap:8px}
 .rec-result--win{background:var(--accent-dim);color:var(--accent);border-left:3px solid var(--accent)}
 .rec-result--loss{background:var(--danger-dim);color:var(--danger);border-left:3px solid var(--danger)}
 .rec-result--pending{background:var(--info-dim);color:var(--info);border-left:3px solid var(--info)}
 .watch-grid{display:grid;gap:8px}
 .watch-item{display:grid;grid-template-columns:1fr auto;align-items:center;padding:16px 20px;background:var(--surface);border:1px solid var(--border);border-radius:10px;transition:border-color .2s}
-.watch-item:hover{border-color:var(--border-active)}
-.watch-asset{font-weight:600;font-size:15px}
+.watch-item:hover{border-color:var(--border-active)}.watch-asset{font-weight:600;font-size:15px}
 .watch-condition{color:var(--text-secondary);font-size:13px;margin-top:2px}
 .watch-status{font-family:var(--mono);font-size:10px;color:var(--text-tertiary);letter-spacing:1px;text-transform:uppercase;text-align:right}
 .method-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .method-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px}
-.method-name{font-weight:600;font-size:15px;margin-bottom:6px}
-.method-desc{color:var(--text-secondary);font-size:13px;line-height:1.6}
+.method-name{font-weight:600;font-size:15px;margin-bottom:6px}.method-desc{color:var(--text-secondary);font-size:13px;line-height:1.6}
 .cta{text-align:center;margin:48px 0;padding:48px 32px;background:var(--surface);border:1px solid var(--border);border-radius:16px}
-.cta h2{font-size:22px;letter-spacing:-0.5px;margin-bottom:8px}
-.cta p{color:var(--text-secondary);font-size:14px;margin-bottom:24px}
+.cta h2{font-size:22px;letter-spacing:-0.5px;margin-bottom:8px}.cta p{color:var(--text-secondary);font-size:14px;margin-bottom:24px}
 .cta-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 32px;background:var(--accent);color:var(--bg);font-weight:600;font-size:14px;border:none;border-radius:8px;cursor:pointer;text-decoration:none;transition:all .15s ease;font-family:var(--font)}
 .cta-btn:hover{opacity:.9;transform:translateY(-1px);text-decoration:none}
 .footer{padding:32px 0;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.footer-text{color:var(--text-quaternary);font-size:12px}
-.footer-disclaimer{color:var(--text-quaternary);font-size:11px;font-style:italic}
-.reveal{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
-.reveal.visible{opacity:1;transform:none}
+.footer-text{color:var(--text-quaternary);font-size:12px}.footer-disclaimer{color:var(--text-quaternary);font-size:11px;font-style:italic}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}.reveal.visible{opacity:1;transform:none}
 .loading{text-align:center;padding:80px 0;color:var(--text-tertiary)}
 .loading-spinner{width:24px;height:24px;border:2px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 16px}
 @keyframes spin{to{transform:rotate(360deg)}}
-@media(max-width:768px){
-  .metrics{grid-template-columns:repeat(3,1fr)}
-  .method-grid{grid-template-columns:1fr}
-  .rec-meta{gap:10px}
-  .footer{flex-direction:column;text-align:center}
-  .hero h1{font-size:26px}
-  .tl-entry{grid-template-columns:56px 8px 1fr}
-}
-@media(max-width:480px){
-  .metrics{grid-template-columns:repeat(2,1fr)}
-  .nav{flex-direction:column;gap:8px;align-items:flex-start}
-  .page{padding:0 16px 60px}
-}
+@media(max-width:768px){.metrics{grid-template-columns:repeat(3,1fr)}.method-grid{grid-template-columns:1fr}.rec-meta{gap:10px}.footer{flex-direction:column;text-align:center}.hero h1{font-size:26px}.tl-entry{grid-template-columns:56px 8px 1fr}}
+@media(max-width:480px){.metrics{grid-template-columns:repeat(2,1fr)}.nav{flex-direction:column;gap:8px;align-items:flex-start}.page{padding:0 16px 60px}}
 </style>
 </head>
 <body>
 <div class="page">
-  <nav class="nav">
-    <span class="nav-brand">Geopolitical Oracle</span>
-    <div class="nav-status">
-      <span class="nav-updated" id="nav-date">--</span>
-      <span class="tension" id="tension-badge"><span class="tension-dot"></span> --</span>
-    </div>
-  </nav>
-  <section class="hero reveal">
-    <h1>Track Record</h1>
-    <p class="hero-sub">Cada recomendacion tiene seguimiento diario publico. No lanzamos ideas al aire — las rastreamos hasta su resolucion.</p>
-  </section>
+  <nav class="nav"><span class="nav-brand">Geopolitical Oracle</span><div class="nav-status"><span class="nav-updated" id="nav-date">--</span><span class="tension" id="tension-badge"><span class="tension-dot"></span> --</span></div></nav>
+  <section class="hero reveal"><h1>Track Record</h1><p class="hero-sub">Cada recomendacion tiene seguimiento diario publico. No lanzamos ideas al aire — las rastreamos hasta su resolucion.</p></section>
   <div class="metrics reveal" id="metrics">
     <div class="metric"><div class="metric-val metric-val--info" id="m-total">--</div><div class="metric-label">Total</div></div>
     <div class="metric"><div class="metric-val metric-val--accent" id="m-active">--</div><div class="metric-label">Activas</div></div>
@@ -167,74 +107,33 @@ a:hover{text-decoration:underline}
     <div class="metric"><div class="metric-val metric-val--accent" id="m-winrate">--</div><div class="metric-label">Acierto</div></div>
     <div class="metric"><div class="metric-val metric-val--warning" id="m-days">--</div><div class="metric-label">Dias Tracking</div></div>
   </div>
-  <div class="loading" id="loading">
-    <div class="loading-spinner"></div>
-    <div>Cargando datos...</div>
-  </div>
+  <div class="loading" id="loading"><div class="loading-spinner"></div><div>Cargando datos...</div></div>
   <div id="content" style="display:none">
-    <div class="section reveal">
-      <div class="section-head">
-        <span class="section-tag">Recomendaciones Activas</span>
-        <span class="section-line"></span>
-        <span class="section-count" id="active-count"></span>
-      </div>
-      <div id="active-container"></div>
-    </div>
-    <div class="section reveal">
-      <div class="section-head">
-        <span class="section-tag">Cerradas</span>
-        <span class="section-line"></span>
-        <span class="section-count" id="closed-count"></span>
-      </div>
-      <div id="closed-container"></div>
-    </div>
-    <div class="section reveal">
-      <div class="section-head">
-        <span class="section-tag">En el Radar</span>
-        <span class="section-line"></span>
-        <span class="section-count" id="watch-count"></span>
-      </div>
-      <div class="watch-grid" id="watchlist-container"></div>
-    </div>
-    <div class="section reveal">
-      <div class="section-head">
-        <span class="section-tag">Frameworks</span>
-        <span class="section-line"></span>
-      </div>
+    <div class="section reveal"><div class="section-head"><span class="section-tag">Recomendaciones Activas</span><span class="section-line"></span><span class="section-count" id="active-count"></span></div><div id="active-container"></div></div>
+    <div class="section reveal"><div class="section-head"><span class="section-tag">Cerradas</span><span class="section-line"></span><span class="section-count" id="closed-count"></span></div><div id="closed-container"></div></div>
+    <div class="section reveal"><div class="section-head"><span class="section-tag">En el Radar</span><span class="section-line"></span><span class="section-count" id="watch-count"></span></div><div class="watch-grid" id="watchlist-container"></div></div>
+    <div class="section reveal"><div class="section-head"><span class="section-tag">Frameworks</span><span class="section-line"></span></div>
       <div class="method-grid">
-        <div class="method-card">
-          <div class="method-name">Ray Dalio — Gran Ciclo Imperial</div>
-          <div class="method-desc">Analiza como las potencias ganan y pierden poder economico. 8 indicadores miden en que etapa del ciclo esta cada potencia. EE.UU. muestra senales de fase tardia.</div>
-        </div>
-        <div class="method-card">
-          <div class="method-name">Robert Pape — Trampa de la Escalada</div>
-          <div class="method-desc">Estudia por que los bombardeos aereos casi nunca logran lo que prometen. 70+ anos de datos muestran que las campanas aereas fallan el 90% de las veces contra paises con motivacion existencial.</div>
-        </div>
+        <div class="method-card"><div class="method-name">Ray Dalio — Gran Ciclo Imperial</div><div class="method-desc">Analiza como las potencias ganan y pierden poder economico. 8 indicadores miden en que etapa del ciclo esta cada potencia.</div></div>
+        <div class="method-card"><div class="method-name">Robert Pape — Trampa de la Escalada</div><div class="method-desc">70+ anos de datos muestran que las campanas aereas fallan el 90% de las veces contra paises con motivacion existencial.</div></div>
       </div>
     </div>
-    <div class="cta reveal">
-      <h2>Recibe el analisis cada manana</h2>
-      <p>Newsletter diaria gratuita. Geopolitica con implicaciones financieras.</p>
-      <a href="mailto:azmfoxtroit@gmail.com?subject=Suscripcion%20Oracle" class="cta-btn">Suscribirse</a>
-    </div>
+    <div class="cta reveal"><h2>Recibe el analisis cada manana</h2><p>Newsletter diaria gratuita. Geopolitica con implicaciones financieras.</p><a href="mailto:azmfoxtroit@gmail.com?subject=Suscripcion%20Oracle" class="cta-btn">Suscribirse</a></div>
   </div>
-  <footer class="footer">
-    <span class="footer-text">Geopolitical Oracle</span>
-    <span class="footer-disclaimer">No es asesoramiento financiero</span>
-  </footer>
+  <footer class="footer"><span class="footer-text">Geopolitical Oracle</span><span class="footer-disclaimer">No es asesoramiento financiero</span></footer>
 </div>
 <script>
-const chevronSVG='<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-function formatDate(d){if(!d)return'--';const p=d.split('-');return p.length===3?p[2]+'/'+p[1]:d}
-function daysBetween(a,b){return Math.round((new Date(b)-new Date(a))/86400000)}
-function escapeHtml(t){const d=document.createElement('div');d.textContent=t;return d.innerHTML}
-function highlightText(text){let t=escapeHtml(text);t=t.replace(/(CONFIRMAD[OA]?|VALIDACI[OÓ]N|HITO|REFORZAD[OA]|RALLY|REBOTE|CORRECCIÓN|ALERTA|INVALIDACI[OÓ]N|ZONA CR[IÍ]TICA|CERO IMPACTO)/g,'<strong>$1</strong>');t=t.replace(/(\$[\d,]+\.?\d*)/g,'<strong>$1</strong>');t=t.replace(/([+-]?\d+\.?\d*%)/g,'<strong>$1</strong>');return t}
-function renderRec(rec,isClosed){const seg=rec.seguimiento||[];const direction=(rec.direccion||'').toLowerCase();const dirLabel=direction==='alcista'?'Alcista':direction==='bajista'?'Bajista':rec.direccion||'';const stateBadge=isClosed?'<span class="badge badge--closed">Cerrada</span>':'<span class="badge badge--active">Activa</span>';const dirBadge=dirLabel?`<span class="badge badge--dir">${escapeHtml(dirLabel)}</span>`:'';let resultHTML='';if(isClosed&&rec.resultado){const tipo=rec.resultado_tipo||'pending';resultHTML=`<div class="rec-result rec-result--${tipo}">${escapeHtml(rec.resultado)}</div>`}const entryPrice=rec.precio_referencia_entrada?`<span class="rec-meta-item">Entrada: $${rec.precio_referencia_entrada.toLocaleString()}</span>`:'';const daysActive=rec.fecha_recomendacion?daysBetween(rec.fecha_recomendacion,new Date().toISOString().slice(0,10)):0;let timelineHTML='';if(seg.length>0){const entries=seg.map((s,i)=>`<div class="tl-entry"><div class="tl-date">${formatDate(s.fecha)}</div><div class="tl-line"><div class="tl-dot"></div><div class="tl-connector"></div></div><div class="tl-text">${highlightText(s.nota||'')}</div></div>`).join('');timelineHTML=`<div class="timeline-toggle" onclick="toggleTimeline(this)">${chevronSVG}<span>Seguimiento (${seg.length} entradas, desde ${formatDate(seg[0].fecha)})</span></div><div class="rec-timeline"><div class="timeline-inner">${entries}</div></div>`}return`<div class="rec"><div class="rec-main"><div class="rec-top"><span class="rec-asset">${escapeHtml(rec.asset||rec.id)}</span><div class="rec-badges">${stateBadge}${dirBadge}</div></div><div class="rec-context">${escapeHtml(rec.contexto_entrada||'')}</div><div class="rec-meta"><span class="rec-meta-item">Desde: ${formatDate(rec.fecha_recomendacion)}</span>${entryPrice}<span class="rec-meta-item">${daysActive}d activa</span><span class="rec-meta-item">${seg.length} updates</span></div>${resultHTML}</div>${timelineHTML}</div>`}
-function toggleTimeline(el){const timeline=el.nextElementSibling;el.classList.toggle('open');timeline.classList.toggle('open')}
-function renderWatchItem(w){return`<div class="watch-item"><div><div class="watch-asset">${escapeHtml(w.asset||w.nombre||'')}</div><div class="watch-condition">${escapeHtml(w.condicion_entrada||w.condicion||w.contexto||'')}</div></div><div class="watch-status">${escapeHtml(w.estado||'Vigilando')}</div></div>`}
-function setTension(level){const badge=document.getElementById('tension-badge');const l=(level||'').toUpperCase();const labels={NORMAL:'Normal',ELEVADO:'Elevado',ALTO:'Alto',CRISIS:'Crisis'};badge.className='tension tension--'+l.toLowerCase();badge.innerHTML=`<span class="tension-dot"></span> ${labels[l]||l}`}
-function render(data){document.getElementById('loading').style.display='none';document.getElementById('content').style.display='block';document.getElementById('nav-date').textContent=data.last_updated||'--';setTension(data.tension);const activas=data.recomendaciones_activas||[];const cerradas=data.recomendaciones_cerradas||[];const total=activas.length+cerradas.length;const wins=cerradas.filter(r=>r.resultado_tipo==='win').length;const winrate=cerradas.length>0?Math.round((wins/cerradas.length)*100)+'%':'--';let allDates=new Set();[...activas,...cerradas].forEach(r=>{(r.seguimiento||[]).forEach(s=>{if(s.fecha)allDates.add(s.fecha)})});document.getElementById('m-total').textContent=total;document.getElementById('m-active').textContent=activas.length;document.getElementById('m-closed').textContent=cerradas.length;document.getElementById('m-winrate').textContent=winrate;document.getElementById('m-days').textContent=allDates.size;document.getElementById('active-count').textContent=activas.length;document.getElementById('active-container').innerHTML=activas.map(r=>renderRec(r,false)).join('');document.getElementById('closed-count').textContent=cerradas.length;document.getElementById('closed-container').innerHTML=cerradas.map(r=>renderRec(r,true)).join('');const watchlist=data.watchlist||[];document.getElementById('watch-count').textContent=watchlist.length;document.getElementById('watchlist-container').innerHTML=watchlist.map(renderWatchItem).join('');requestAnimationFrame(()=>{document.querySelectorAll('.reveal').forEach((el,i)=>{setTimeout(()=>el.classList.add('visible'),i*80)})})}
-fetch('data.json').then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(render).catch(err=>{document.getElementById('loading').innerHTML='<div style="color:var(--danger)">Error cargando datos</div><div style="margin-top:8px;color:var(--text-tertiary);font-size:13px">'+err.message+'</div>'});
+const C='<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+function fD(d){if(!d)return'--';const p=d.split('-');return p.length===3?p[2]+'/'+p[1]:d}
+function dB(a,b){return Math.round((new Date(b)-new Date(a))/864e5)}
+function eH(t){const d=document.createElement('div');d.textContent=t;return d.innerHTML}
+function hT(t){let s=eH(t);s=s.replace(/(CONFIRMAD[OA]?|VALIDACI[OÓ]N|HITO|REFORZAD[OA]|RALLY|REBOTE|CORRECCIÓN|ALERTA|INVALIDACI[OÓ]N|ZONA CR[IÍ]TICA|CERO IMPACTO|UPGRADE|RESCATA)/g,'<strong>$1</strong>');s=s.replace(/(\$[\d,]+\.?\d*)/g,'<strong>$1</strong>');s=s.replace(/([+-]?\d+\.?\d*%)/g,'<strong>$1</strong>');return s}
+function rR(r,cl){const s=r.seguimiento||[];const dir=(r.direccion||'').toLowerCase();const dl=dir==='alcista'?'Alcista':dir==='bajista'?'Bajista':r.direccion||'';const sb=cl?'<span class="badge badge--closed">Cerrada</span>':'<span class="badge badge--active">Activa</span>';const db=dl?'<span class="badge badge--dir">'+eH(dl)+'</span>':'';let rh='';if(cl&&r.resultado){rh='<div class="rec-result rec-result--'+(r.resultado_tipo||'pending')+'">'+eH(r.resultado)+'</div>'}const ep=r.precio_referencia_entrada?'<span class="rec-meta-item">Entrada: $'+r.precio_referencia_entrada.toLocaleString()+'</span>':'';const da=r.fecha_recomendacion?dB(r.fecha_recomendacion,new Date().toISOString().slice(0,10)):0;let th='';if(s.length>0){const e=s.map(x=>'<div class="tl-entry"><div class="tl-date">'+fD(x.fecha)+'</div><div class="tl-line"><div class="tl-dot"></div><div class="tl-connector"></div></div><div class="tl-text">'+hT(x.nota||'')+'</div></div>').join('');th='<div class="timeline-toggle" onclick="tT(this)">'+C+'<span>Seguimiento ('+s.length+' entradas, desde '+fD(s[0].fecha)+')</span></div><div class="rec-timeline"><div class="timeline-inner">'+e+'</div></div>'}return'<div class="rec"><div class="rec-main"><div class="rec-top"><span class="rec-asset">'+eH(r.asset||r.id)+'</span><div class="rec-badges">'+sb+db+'</div></div><div class="rec-context">'+eH(r.contexto_entrada||'')+'</div><div class="rec-meta"><span class="rec-meta-item">Desde: '+fD(r.fecha_recomendacion)+'</span>'+ep+'<span class="rec-meta-item">'+da+'d activa</span><span class="rec-meta-item">'+s.length+' updates</span></div>'+rh+'</div>'+th+'</div>'}
+function tT(el){el.nextElementSibling.classList.toggle('open');el.classList.toggle('open')}
+function rW(w){return'<div class="watch-item"><div><div class="watch-asset">'+eH(w.asset||'')+'</div><div class="watch-condition">'+eH(w.condicion_entrada||w.condicion||w.contexto||'')+'</div></div><div class="watch-status">'+eH(w.estado||'Vigilando')+'</div></div>'}
+function sT(l){const b=document.getElementById('tension-badge');const u=(l||'').toUpperCase();const m={NORMAL:'Normal',ELEVADO:'Elevado',ALTO:'Alto',CRISIS:'Crisis'};b.className='tension tension--'+u.toLowerCase();b.innerHTML='<span class="tension-dot"></span> '+(m[u]||u)}
+function go(d){document.getElementById('loading').style.display='none';document.getElementById('content').style.display='block';document.getElementById('nav-date').textContent=d.last_updated||'--';sT(d.tension);const a=d.recomendaciones_activas||[];const c=d.recomendaciones_cerradas||[];const w=a.filter(r=>r.resultado_tipo==='win').length+c.filter(r=>r.resultado_tipo==='win').length;const ct=c.length;const wr=ct>0?Math.round((w/ct)*100)+'%':'--';let ad=new Set();[...a,...c].forEach(r=>{(r.seguimiento||[]).forEach(s=>{if(s.fecha)ad.add(s.fecha)})});document.getElementById('m-total').textContent=a.length+c.length;document.getElementById('m-active').textContent=a.length;document.getElementById('m-closed').textContent=c.length;document.getElementById('m-winrate').textContent=wr;document.getElementById('m-days').textContent=ad.size;document.getElementById('active-count').textContent=a.length;document.getElementById('active-container').innerHTML=a.map(r=>rR(r,false)).join('');document.getElementById('closed-count').textContent=c.length;document.getElementById('closed-container').innerHTML=c.map(r=>rR(r,true)).join('');const wl=d.watchlist||[];document.getElementById('watch-count').textContent=wl.length;document.getElementById('watchlist-container').innerHTML=wl.map(rW).join('');requestAnimationFrame(()=>{document.querySelectorAll('.reveal').forEach((el,i)=>{setTimeout(()=>el.classList.add('visible'),i*80)})})}
+Promise.all([fetch('data-1.json').then(r=>{if(!r.ok)throw new Error('d1:'+r.status);return r.json()}),fetch('data-2.json').then(r=>{if(!r.ok)throw new Error('d2:'+r.status);return r.json()})]).then(([d1,d2])=>{go({last_updated:d1.last_updated,tension:d1.tension,recomendaciones_activas:[...(d1.recomendaciones_activas||[]),...(d2.recomendaciones_activas_2||[])],recomendaciones_cerradas:d2.recomendaciones_cerradas||[],watchlist:d2.watchlist||[]})}).catch(e=>{document.getElementById('loading').innerHTML='<div style="color:var(--danger)">Error cargando datos</div><div style="margin-top:8px;color:var(--text-tertiary);font-size:13px">'+e.message+'</div>'});
 </script>
 </body>
 </html>
