@@ -44,16 +44,11 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 
-/* Layout */
 .page{max-width:1080px;margin:0 auto;padding:0 24px 80px}
-
-/* Nav */
 .nav{padding:20px 0;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border)}
 .nav-brand{font-family:var(--mono);font-size:11px;letter-spacing:3px;color:var(--text-tertiary);text-transform:uppercase}
 .nav-status{display:flex;align-items:center;gap:12px}
 .nav-updated{font-family:var(--mono);font-size:11px;color:var(--text-tertiary)}
-
-/* Tension indicator */
 .tension{display:inline-flex;align-items:center;gap:6px;padding:4px 14px;border-radius:100px;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
 .tension-dot{width:6px;height:6px;border-radius:50%;animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
@@ -65,13 +60,9 @@ a:hover{text-decoration:underline}
 .tension--normal .tension-dot{background:var(--accent)}
 .tension--crisis{background:var(--danger-dim);color:var(--danger);border:1px solid rgba(255,71,87,0.4)}
 .tension--crisis .tension-dot{background:var(--danger);animation:pulse 0.8s ease-in-out infinite}
-
-/* Hero */
 .hero{padding:56px 0 40px}
 .hero h1{font-size:clamp(28px,4vw,42px);font-weight:700;letter-spacing:-1.5px;line-height:1.1;color:#fff}
 .hero-sub{color:var(--text-secondary);font-size:16px;margin-top:12px;max-width:640px;line-height:1.7}
-
-/* Metrics grid */
 .metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);border-radius:12px;overflow:hidden;margin-bottom:48px}
 .metric{background:var(--surface);padding:24px;text-align:center}
 .metric-val{font-family:var(--mono);font-size:clamp(24px,3vw,32px);font-weight:700;letter-spacing:-0.5px}
@@ -80,15 +71,11 @@ a:hover{text-decoration:underline}
 .metric-val--info{color:var(--info)}
 .metric-val--danger{color:var(--danger)}
 .metric-label{font-size:10px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:1.5px;margin-top:6px}
-
-/* Section headers */
 .section{margin-bottom:48px}
 .section-head{display:flex;align-items:center;gap:12px;margin-bottom:20px}
 .section-tag{font-family:var(--mono);font-size:10px;letter-spacing:2px;color:var(--accent);text-transform:uppercase;white-space:nowrap}
 .section-line{flex:1;height:1px;background:var(--border)}
 .section-count{font-family:var(--mono);font-size:11px;color:var(--text-tertiary)}
-
-/* Recommendation cards */
 .rec{background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden;transition:border-color .2s ease}
 .rec:hover{border-color:var(--border-active)}
 .rec-main{padding:24px}
@@ -104,8 +91,6 @@ a:hover{text-decoration:underline}
 .rec-context{color:var(--text-secondary);font-size:14px;line-height:1.6;margin-bottom:14px}
 .rec-meta{display:flex;gap:20px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;color:var(--text-tertiary)}
 .rec-meta-item{display:flex;align-items:center;gap:4px}
-
-/* Timeline / seguimiento */
 .rec-timeline{border-top:1px solid var(--border);background:var(--bg);max-height:0;overflow:hidden;transition:max-height .4s ease}
 .rec-timeline.open{max-height:3000px}
 .timeline-toggle{display:flex;align-items:center;gap:6px;padding:12px 24px;cursor:pointer;font-size:12px;color:var(--text-tertiary);border-top:1px solid var(--border);transition:color .2s;user-select:none;background:var(--surface)}
@@ -121,49 +106,33 @@ a:hover{text-decoration:underline}
 .tl-entry:last-child .tl-connector{display:none}
 .tl-text{font-size:13px;color:var(--text-secondary);padding:6px 0 16px;line-height:1.6}
 .tl-text strong{color:var(--text);font-weight:500}
-
-/* Result badge in closed recs */
 .rec-result{margin:12px 0 0;padding:10px 16px;border-radius:8px;font-size:13px;font-weight:500;display:flex;align-items:center;gap:8px}
 .rec-result--win{background:var(--accent-dim);color:var(--accent);border-left:3px solid var(--accent)}
 .rec-result--loss{background:var(--danger-dim);color:var(--danger);border-left:3px solid var(--danger)}
 .rec-result--pending{background:var(--info-dim);color:var(--info);border-left:3px solid var(--info)}
-
-/* Watchlist */
 .watch-grid{display:grid;gap:8px}
 .watch-item{display:grid;grid-template-columns:1fr auto;align-items:center;padding:16px 20px;background:var(--surface);border:1px solid var(--border);border-radius:10px;transition:border-color .2s}
 .watch-item:hover{border-color:var(--border-active)}
 .watch-asset{font-weight:600;font-size:15px}
 .watch-condition{color:var(--text-secondary);font-size:13px;margin-top:2px}
 .watch-status{font-family:var(--mono);font-size:10px;color:var(--text-tertiary);letter-spacing:1px;text-transform:uppercase;text-align:right}
-
-/* Methodology */
 .method-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .method-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px}
 .method-name{font-weight:600;font-size:15px;margin-bottom:6px}
 .method-desc{color:var(--text-secondary);font-size:13px;line-height:1.6}
-
-/* CTA */
 .cta{text-align:center;margin:48px 0;padding:48px 32px;background:var(--surface);border:1px solid var(--border);border-radius:16px}
 .cta h2{font-size:22px;letter-spacing:-0.5px;margin-bottom:8px}
 .cta p{color:var(--text-secondary);font-size:14px;margin-bottom:24px}
 .cta-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 32px;background:var(--accent);color:var(--bg);font-weight:600;font-size:14px;border:none;border-radius:8px;cursor:pointer;text-decoration:none;transition:all .15s ease;font-family:var(--font)}
 .cta-btn:hover{opacity:.9;transform:translateY(-1px);text-decoration:none}
-
-/* Footer */
 .footer{padding:32px 0;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .footer-text{color:var(--text-quaternary);font-size:12px}
 .footer-disclaimer{color:var(--text-quaternary);font-size:11px;font-style:italic}
-
-/* Scroll reveal */
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
 .reveal.visible{opacity:1;transform:none}
-
-/* Loading state */
 .loading{text-align:center;padding:80px 0;color:var(--text-tertiary)}
 .loading-spinner{width:24px;height:24px;border:2px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 16px}
 @keyframes spin{to{transform:rotate(360deg)}}
-
-/* Responsive */
 @media(max-width:768px){
   .metrics{grid-template-columns:repeat(3,1fr)}
   .method-grid{grid-template-columns:1fr}
@@ -181,8 +150,6 @@ a:hover{text-decoration:underline}
 </head>
 <body>
 <div class="page">
-
-  <!-- NAV -->
   <nav class="nav">
     <span class="nav-brand">Geopolitical Oracle</span>
     <div class="nav-status">
@@ -190,14 +157,10 @@ a:hover{text-decoration:underline}
       <span class="tension" id="tension-badge"><span class="tension-dot"></span> --</span>
     </div>
   </nav>
-
-  <!-- HERO -->
   <section class="hero reveal">
     <h1>Track Record</h1>
     <p class="hero-sub">Cada recomendacion tiene seguimiento diario publico. No lanzamos ideas al aire — las rastreamos hasta su resolucion.</p>
   </section>
-
-  <!-- METRICS -->
   <div class="metrics reveal" id="metrics">
     <div class="metric"><div class="metric-val metric-val--info" id="m-total">--</div><div class="metric-label">Total</div></div>
     <div class="metric"><div class="metric-val metric-val--accent" id="m-active">--</div><div class="metric-label">Activas</div></div>
@@ -205,17 +168,11 @@ a:hover{text-decoration:underline}
     <div class="metric"><div class="metric-val metric-val--accent" id="m-winrate">--</div><div class="metric-label">Acierto</div></div>
     <div class="metric"><div class="metric-val metric-val--warning" id="m-days">--</div><div class="metric-label">Dias Tracking</div></div>
   </div>
-
-  <!-- LOADING -->
   <div class="loading" id="loading">
     <div class="loading-spinner"></div>
     <div>Cargando datos...</div>
   </div>
-
-  <!-- CONTENT (hidden until data loads) -->
   <div id="content" style="display:none">
-
-    <!-- ACTIVE -->
     <div class="section reveal">
       <div class="section-head">
         <span class="section-tag">Recomendaciones Activas</span>
@@ -224,8 +181,6 @@ a:hover{text-decoration:underline}
       </div>
       <div id="active-container"></div>
     </div>
-
-    <!-- CLOSED -->
     <div class="section reveal">
       <div class="section-head">
         <span class="section-tag">Cerradas</span>
@@ -234,8 +189,6 @@ a:hover{text-decoration:underline}
       </div>
       <div id="closed-container"></div>
     </div>
-
-    <!-- WATCHLIST -->
     <div class="section reveal">
       <div class="section-head">
         <span class="section-tag">En el Radar</span>
@@ -244,8 +197,6 @@ a:hover{text-decoration:underline}
       </div>
       <div class="watch-grid" id="watchlist-container"></div>
     </div>
-
-    <!-- METHODOLOGY -->
     <div class="section reveal">
       <div class="section-head">
         <span class="section-tag">Frameworks</span>
@@ -262,88 +213,68 @@ a:hover{text-decoration:underline}
         </div>
       </div>
     </div>
-
-    <!-- CTA -->
     <div class="cta reveal">
       <h2>Recibe el analisis cada manana</h2>
       <p>Newsletter diaria gratuita. Geopolitica con implicaciones financieras.</p>
       <a href="mailto:azmfoxtroit@gmail.com?subject=Suscripcion%20Oracle" class="cta-btn">Suscribirse</a>
     </div>
-
   </div>
-
-  <!-- FOOTER -->
   <footer class="footer">
     <span class="footer-text">Geopolitical Oracle</span>
     <span class="footer-disclaimer">No es asesoramiento financiero</span>
   </footer>
-
 </div>
-
 <script>
 const chevronSVG = '<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-
 function formatDate(d){if(!d)return'--';const p=d.split('-');return p.length===3?p[2]+'/'+p[1]:d}
 function daysBetween(a,b){return Math.round((new Date(b)-new Date(a))/86400000)}
 function escapeHtml(t){const d=document.createElement('div');d.textContent=t;return d.innerHTML}
-
-function highlightText(text) {
-  let t = escapeHtml(text);
-  // Highlight key signals
-  t = t.replace(/(CONFIRMAD[OA]?|VALIDACI[OÓ]N|HITO|REFORZAD[OA]|RALLY|REBOTE|CORRECCIÓN|ALERTA|INVALIDACI[OÓ]N|ZONA CR[IÍ]TICA|CERO IMPACTO)/g, '<strong>$1</strong>');
-  // Highlight percentages and prices
-  t = t.replace(/(\$[\d,]+\.?\d*)/g, '<strong>$1</strong>');
-  t = t.replace(/([+-]?\d+\.?\d*%)/g, '<strong>$1</strong>');
+function highlightText(text){
+  let t=escapeHtml(text);
+  t=t.replace(/(CONFIRMAD[OA]?|VALIDACI[OÓ]N|HITO|REFORZAD[OA]|RALLY|REBOTE|CORRECCIÓN|ALERTA|INVALIDACI[OÓ]N|ZONA CR[IÍ]TICA|CERO IMPACTO)/g,'<strong>$1</strong>');
+  t=t.replace(/(\$[\d,]+\.?\d*)/g,'<strong>$1</strong>');
+  t=t.replace(/([+-]?\d+\.?\d*%)/g,'<strong>$1</strong>');
   return t;
 }
-
-function renderRec(rec, isClosed) {
-  const seg = rec.seguimiento || [];
-  const direction = (rec.direccion||'').toLowerCase();
-  const dirLabel = direction === 'alcista' ? 'Alcista' : direction === 'bajista' ? 'Bajista' : rec.direccion || '';
-  const stateBadge = isClosed
-    ? '<span class="badge badge--closed">Cerrada</span>'
-    : '<span class="badge badge--active">Activa</span>';
-  const dirBadge = dirLabel ? `<span class="badge badge--dir">${escapeHtml(dirLabel)}</span>` : '';
-
-  let resultHTML = '';
-  if (isClosed && rec.resultado) {
-    const tipo = rec.resultado_tipo || 'pending';
-    resultHTML = `<div class="rec-result rec-result--${tipo}">${escapeHtml(rec.resultado)}</div>`;
+function renderRec(rec,isClosed){
+  const seg=rec.seguimiento||[];
+  const direction=(rec.direccion||'').toLowerCase();
+  const dirLabel=direction==='alcista'?'Alcista':direction==='bajista'?'Bajista':rec.direccion||'';
+  const stateBadge=isClosed?'<span class="badge badge--closed">Cerrada</span>':'<span class="badge badge--active">Activa</span>';
+  const dirBadge=dirLabel?`<span class="badge badge--dir">${escapeHtml(dirLabel)}</span>`:'';
+  let resultHTML='';
+  if(isClosed&&rec.resultado){
+    const tipo=rec.resultado_tipo||'pending';
+    resultHTML=`<div class="rec-result rec-result--${tipo}">${escapeHtml(rec.resultado)}</div>`;
   }
-
-  const entryPrice = rec.precio_referencia_entrada ? `<span class="rec-meta-item">Entrada: $${rec.precio_referencia_entrada.toLocaleString()}</span>` : '';
-  const daysActive = rec.fecha_recomendacion ? daysBetween(rec.fecha_recomendacion, new Date().toISOString().slice(0,10)) : 0;
-
-  let timelineHTML = '';
-  if (seg.length > 0) {
-    const entries = seg.map((s, i) => `
+  const entryPrice=rec.precio_referencia_entrada?`<span class="rec-meta-item">Entrada: $${rec.precio_referencia_entrada.toLocaleString()}</span>`:
+    (rec.precio_referencia_yields?`<span class="rec-meta-item">10Y: ${rec.precio_referencia_yields['10Y']}%</span>`:'');
+  const daysActive=rec.fecha_recomendacion?daysBetween(rec.fecha_recomendacion,new Date().toISOString().slice(0,10)):0;
+  let timelineHTML='';
+  if(seg.length>0){
+    const entries=seg.map(s=>`
       <div class="tl-entry">
         <div class="tl-date">${formatDate(s.fecha)}</div>
         <div class="tl-line"><div class="tl-dot"></div><div class="tl-connector"></div></div>
-        <div class="tl-text">${highlightText(s.nota || '')}</div>
-      </div>
-    `).join('');
-
-    timelineHTML = `
+        <div class="tl-text">${highlightText(s.nota||'')}</div>
+      </div>`).join('');
+    timelineHTML=`
       <div class="timeline-toggle" onclick="toggleTimeline(this)">
         ${chevronSVG}
         <span>Seguimiento (${seg.length} entradas, desde ${formatDate(seg[0].fecha)})</span>
       </div>
       <div class="rec-timeline">
         <div class="timeline-inner">${entries}</div>
-      </div>
-    `;
+      </div>`;
   }
-
   return `
     <div class="rec">
       <div class="rec-main">
         <div class="rec-top">
-          <span class="rec-asset">${escapeHtml(rec.asset || rec.id)}</span>
+          <span class="rec-asset">${escapeHtml(rec.asset||rec.id)}</span>
           <div class="rec-badges">${stateBadge}${dirBadge}</div>
         </div>
-        <div class="rec-context">${escapeHtml(rec.contexto_entrada || '')}</div>
+        <div class="rec-context">${escapeHtml(rec.contexto_entrada||'')}</div>
         <div class="rec-meta">
           <span class="rec-meta-item">Desde: ${formatDate(rec.fecha_recomendacion)}</span>
           ${entryPrice}
@@ -353,101 +284,75 @@ function renderRec(rec, isClosed) {
         ${resultHTML}
       </div>
       ${timelineHTML}
-    </div>
-  `;
+    </div>`;
 }
-
-function toggleTimeline(el) {
-  const timeline = el.nextElementSibling;
+function toggleTimeline(el){
+  const timeline=el.nextElementSibling;
   el.classList.toggle('open');
   timeline.classList.toggle('open');
 }
-
-function renderWatchItem(w) {
+function renderWatchItem(w){
   return `
     <div class="watch-item">
       <div>
-        <div class="watch-asset">${escapeHtml(w.asset || w.nombre || '')}</div>
-        <div class="watch-condition">${escapeHtml(w.condicion_entrada || w.condicion || w.contexto || '')}</div>
+        <div class="watch-asset">${escapeHtml(w.asset||w.nombre||'')}</div>
+        <div class="watch-condition">${escapeHtml(w.condicion_entrada||w.condicion||w.contexto||'')}</div>
       </div>
-      <div class="watch-status">${escapeHtml(w.estado || 'Vigilando')}</div>
-    </div>
-  `;
+      <div class="watch-status">${escapeHtml(w.estado||'Vigilando')}</div>
+    </div>`;
 }
-
-function setTension(level) {
-  const badge = document.getElementById('tension-badge');
-  const l = (level || '').toUpperCase();
-  const labels = { NORMAL: 'Normal', ELEVADO: 'Elevado', ALTO: 'Alto', CRISIS: 'Crisis' };
-  badge.className = 'tension tension--' + l.toLowerCase();
-  badge.innerHTML = `<span class="tension-dot"></span> ${labels[l] || l}`;
+function setTension(level){
+  const badge=document.getElementById('tension-badge');
+  const l=(level||'').toUpperCase();
+  const labels={NORMAL:'Normal',ELEVADO:'Elevado',ALTO:'Alto',CRISIS:'Crisis'};
+  badge.className='tension tension--'+l.toLowerCase();
+  badge.innerHTML=`<span class="tension-dot"></span> ${labels[l]||l}`;
 }
-
-function render(data) {
-  document.getElementById('loading').style.display = 'none';
-  document.getElementById('content').style.display = 'block';
-
-  // Nav
-  document.getElementById('nav-date').textContent = data.last_updated || '--';
+function render(data){
+  document.getElementById('loading').style.display='none';
+  document.getElementById('content').style.display='block';
+  document.getElementById('nav-date').textContent=data.last_updated||'--';
   setTension(data.tension);
-
-  // Metrics
-  const activas = data.recomendaciones_activas || [];
-  const cerradas = data.recomendaciones_cerradas || [];
-  const total = activas.length + cerradas.length;
-  const wins = cerradas.filter(r => r.resultado_tipo === 'win').length;
-  const winrate = cerradas.length > 0 ? Math.round((wins / cerradas.length) * 100) + '%' : '--';
-
-  // Calculate total tracking days
-  let allDates = new Set();
-  [...activas, ...cerradas].forEach(r => {
-    (r.seguimiento || []).forEach(s => { if(s.fecha) allDates.add(s.fecha) });
-  });
-  const trackingDays = allDates.size;
-
-  document.getElementById('m-total').textContent = total;
-  document.getElementById('m-active').textContent = activas.length;
-  document.getElementById('m-closed').textContent = cerradas.length;
-  document.getElementById('m-winrate').textContent = winrate;
-  document.getElementById('m-days').textContent = trackingDays;
-
-  // Active
-  document.getElementById('active-count').textContent = activas.length;
-  document.getElementById('active-container').innerHTML = activas.map(r => renderRec(r, false)).join('');
-
-  // Closed
-  document.getElementById('closed-count').textContent = cerradas.length;
-  document.getElementById('closed-container').innerHTML = cerradas.map(r => renderRec(r, true)).join('');
-
-  // Watchlist
-  const watchlist = data.watchlist || [];
-  document.getElementById('watch-count').textContent = watchlist.length;
-  document.getElementById('watchlist-container').innerHTML = watchlist.map(renderWatchItem).join('');
-
-  // Reveal animations
-  requestAnimationFrame(() => {
-    document.querySelectorAll('.reveal').forEach((el, i) => {
-      setTimeout(() => el.classList.add('visible'), i * 80);
+  const activas=data.recomendaciones_activas||[];
+  const cerradas=data.recomendaciones_cerradas||[];
+  const total=activas.length+cerradas.length;
+  const wins=cerradas.filter(r=>r.resultado_tipo==='win').length;
+  const winrate=cerradas.length>0?Math.round((wins/cerradas.length)*100)+'%':'--';
+  let allDates=new Set();
+  [...activas,...cerradas].forEach(r=>{(r.seguimiento||[]).forEach(s=>{if(s.fecha)allDates.add(s.fecha)})});
+  document.getElementById('m-total').textContent=total;
+  document.getElementById('m-active').textContent=activas.length;
+  document.getElementById('m-closed').textContent=cerradas.length;
+  document.getElementById('m-winrate').textContent=winrate;
+  document.getElementById('m-days').textContent=allDates.size;
+  document.getElementById('active-count').textContent=activas.length;
+  document.getElementById('active-container').innerHTML=activas.map(r=>renderRec(r,false)).join('');
+  document.getElementById('closed-count').textContent=cerradas.length;
+  document.getElementById('closed-container').innerHTML=cerradas.map(r=>renderRec(r,true)).join('');
+  const watchlist=data.watchlist||[];
+  document.getElementById('watch-count').textContent=watchlist.length;
+  document.getElementById('watchlist-container').innerHTML=watchlist.map(renderWatchItem).join('');
+  requestAnimationFrame(()=>{
+    document.querySelectorAll('.reveal').forEach((el,i)=>{
+      setTimeout(()=>el.classList.add('visible'),i*80);
     });
   });
 }
-
-// Load data from split files (workaround for GitHub file size limits)
 Promise.all([
-  fetch('data-1.json').then(r => { if(!r.ok) throw new Error('data-1: '+r.status); return r.json() }),
-  fetch('data-2.json').then(r => { if(!r.ok) throw new Error('data-2: '+r.status); return r.json() })
-]).then(([d1, d2]) => {
-  const merged = {
-    last_updated: d1.last_updated,
-    tension: d1.tension,
-    recomendaciones_activas: [...(d1.recomendaciones_activas||[]), ...(d2.recomendaciones_activas_2||[])],
-    recomendaciones_cerradas: d2.recomendaciones_cerradas || [],
-    watchlist: d2.watchlist || []
+  fetch('data-1.json').then(r=>{if(!r.ok)throw new Error('data-1: '+r.status);return r.json()}),
+  fetch('data-2.json').then(r=>{if(!r.ok)throw new Error('data-2: '+r.status);return r.json()})
+]).then(([d1,d2])=>{
+  const merged={
+    last_updated:d1.last_updated,
+    tension:d1.tension,
+    recomendaciones_activas:[...(d1.recomendaciones_activas||[]),...(d2.recomendaciones_activas_2||[])],
+    recomendaciones_cerradas:d2.recomendaciones_cerradas||[],
+    watchlist:d2.watchlist||[]
   };
   render(merged);
-}).catch(err => {
-  document.getElementById('loading').innerHTML =
-    '<div style="color:var(--danger)">Error cargando datos</div><div style="margin-top:8px;color:var(--text-tertiary);font-size:13px">' + err.message + '</div>';
+}).catch(err=>{
+  document.getElementById('loading').innerHTML=
+    '<div style="color:var(--danger)">Error cargando datos</div><div style="margin-top:8px;color:var(--text-tertiary);font-size:13px">'+err.message+'</div>';
 });
 </script>
 </body>
